@@ -6,7 +6,9 @@ queue()
 /*skapar graf och hämtar data*/
 function makeGraphs(error, payrollData) {
     var ndx = crossfilter(payrollData);
-    var type_dim = ndx.dimension(function(d) { return d["Type"] = "Taxes" ? "Social Security Fees":"Nettpay"});
+    var type_dim  = ndx.dimension(function (d) {return ((d["Type"] = "Taxes") && (d["Type"] = "Nettpay")) ;});
+    
+    /*var type_dim = ndx.dimension(function(d) { return d["Type"] = "Taxes"} &&  );
     /*varför inte skapa en dimension för varje av de 3 jag vill ha? type=xx */
     
     /*var type_dim_filter = function(type_dim){return d.Type = if };*/
