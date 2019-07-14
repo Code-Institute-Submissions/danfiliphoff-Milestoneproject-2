@@ -12,11 +12,15 @@ function makeGraphs(error, totalCost) {
     
     dc.pieChart('#total-cost-pie-chart')
         .height(500)
-        .radius(450)
+        .radius(200)
+        .innerRadius(100)
         .transitionDuration(1500)
         .dimension(type_dim)
-        .group(total_cost_pie_chart);
-        .label()
+        .group(total_cost_pie_chart)
+        .externalLabels(35)
+        .label(function(d){return d.key + " " + d.value})
+        .renderLabel(true);
+    
         
         
     dc.renderAll();
