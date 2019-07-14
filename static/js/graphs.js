@@ -12,13 +12,13 @@ function makeGraphs(error, totalCost) {
     
     
     dc.pieChart('#total-cost-pie-chart')
-        .height(500)
+        .height(1000)
         .radius(200)
         .innerRadius(100)
         .transitionDuration(1500)
         .dimension(type_dim)
         .group(total_cost_pie_chart)
-        .externalLabels(35)
+        .externalLabels(50)
         /*8129071: har summerat ihopp för hand vill hitta kod som summerar ihopp åt mig. 
         *100)/100 i slutet av formeln är för att få med 2 decimal tecken i procenten
         */
