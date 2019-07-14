@@ -8,6 +8,7 @@ function makeGraphs(error, totalCost) {
     var ndx = crossfilter(totalCost);
     var type_dim = ndx.dimension(function(d) { return d["Type"]; });
     var total_cost_pie_chart = type_dim.group().reduceSum(dc.pluck('Sum'));
+
     
     
     dc.pieChart('#total-cost-pie-chart')
@@ -18,7 +19,10 @@ function makeGraphs(error, totalCost) {
         .dimension(type_dim)
         .group(total_cost_pie_chart)
         .externalLabels(35)
-        .label(function(d){return d.key + " " + d.value})
+        /*8129071: har summerat ihopp för hand vill hitta kod som summerar ihopp åt mig. 
+        *100)/100 i slutet av formeln är för att få med 2 decimal tecken i procenten
+        */
+        .label(function(d){return d.key + " " + d.value + " " + "KR (" +  Math.round((d.value/(8129071/100))*100)/100 + "%)"})
         .renderLabel(true);
     
         
