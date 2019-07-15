@@ -1,12 +1,12 @@
 /*väntar med att skapa graf tills data är laddat*/
 queue()
     .defer(d3.csv, "data/total.cost.csv")
-    .await(makeGraphs);
+    .await(makePie);
     
 /*skapar graf och hämtar data*/
-function makeGraphs(error, totalCost) {
-    var ndx = crossfilter(totalCost);
-    var type_dim = ndx.dimension(function(d) { return d["Type"]; });
+function makePie(error, totalCost) {
+    var pie = crossfilter(totalCost);
+    var type_dim = pie.dimension(function(d) { return d["Type"]; });
     var total_cost_pie_chart = type_dim.group().reduceSum(dc.pluck('Sum'));
 
     
