@@ -11,7 +11,7 @@ queue()
 function makeGraphs(error, totalCost){
     
     var dateFormatSpecifier = "%Y-%m-%d"; 
-    var dateFormat = d3.timeFormat(dateFormatSpecifier); 
+    var dateFormat = d3.time.format(dateFormatSpecifier); 
     var dateFormatParser = d3.timeParse(dateFormatSpecifier); 
     var numberFormat = d3.format('.2f'); 
 
