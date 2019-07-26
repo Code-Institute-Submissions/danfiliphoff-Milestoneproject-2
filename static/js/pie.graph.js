@@ -18,7 +18,6 @@ function makeGraphs(error, totalCost){
     totalCost.forEach(function(d) { 
         d.Sum = parseInt(d.Sum, 10); /*intiger vs string*/ 
         d.dd = dateFormatParser(d.date); 
-        d.month = d3.timeMonth(d.dd); 
         d.close = +d.close; 
         d.open = +d.open; 
 
@@ -28,7 +27,7 @@ function makeGraphs(error, totalCost){
     
    var ndx=crossfilter(totalCost);
    makePie(ndx);
-   makeTotalLineGraph(ndx);
+   TotalLineGraph(ndx);
    dc.renderAll();
 }
     
@@ -53,11 +52,14 @@ function makePie(ndx) {
         .renderLabel(true);
 }
 
-function makeTotalLineGraph(ndx) {  
+function TotalLineGraph(ndx) {  
     var payment_date_dim = ndx.dimension(function(d) { return d["PaymentDate"]; });  
-    var total_spend_per_date = payment_date_dim.group().reduceSum(dc.pluck('Sum'));  
+    var total_spend_per_date = payment_date_dim.group().reduceSum(dc.pluck('Sum'));
+    
+    var minDate = payment_date_dim.bottom(1)[0].date;
+    var maxDate = payment_date_dim.top(1)[0].date;
   
-    dc.TotalLineGraph('#total-cost-line-graph')  
+    dc.lineChart('#total-cost-line-graph')  
         .width(1000)  
         .height(300)  
         .dimension(payment_date_dim)  
