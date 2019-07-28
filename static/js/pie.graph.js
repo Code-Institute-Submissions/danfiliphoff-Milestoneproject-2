@@ -10,20 +10,11 @@ queue()
     
 function makeGraphs(error, totalCost){
     
-    var dateFormatSpecifier = "%Y-%m-%d"; 
-    var dateFormat = d3.time.format(dateFormatSpecifier); 
-    var dateFormatParser = d3.timeParse(dateFormatSpecifier); 
-    var numberFormat = d3.format('.2f'); 
+    var parseDate = d3.time.format("%Y-%m-%d").parse;
+        totalCost.forEach(function(d){
+            d.PaymentDate = parseDate(d.PaymentDate);
+        });
 
-    totalCost.forEach(function(d) { 
-        d.Sum = parseInt(d.Sum, 10); /*intiger vs string*/ 
-        d.dd = dateFormatParser(d.date); 
-        d.close = +d.close; 
-        d.open = +d.open; 
-
-    }); 
-
-    console.log(dateFormatParser); 
     
    var ndx=crossfilter(totalCost);
    makePie(ndx);
@@ -56,8 +47,8 @@ function TotalLineGraph(ndx) {
     var payment_date_dim = ndx.dimension(function(d) { return d["PaymentDate"]; });  
     var total_spend_per_date = payment_date_dim.group().reduceSum(dc.pluck('Sum'));
     
-    var minDate = payment_date_dim.bottom(1)[0].date;
-    var maxDate = payment_date_dim.top(1)[0].date;
+    var minDate = payment_date_dim.bottom(1)[0].PaymentDate;
+    var maxDate = payment_date_dim.top(1)[0].PaymentDate;
   
     dc.lineChart('#total-cost-line-graph')  
         .width(1000)  
