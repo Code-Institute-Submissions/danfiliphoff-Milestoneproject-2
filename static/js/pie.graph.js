@@ -24,8 +24,29 @@ function makeGraphs(error, totalCost){
     
     
 /*skapar graf och hämtar data*/
+function TotalLineGraph(ndx) {  
+    var payment_date_dim = ndx.dimension(dc.pluck("PaymentDate"));  
+    var total_spend_per_date = payment_date_dim.group().reduceSum(dc.pluck('Sum'));
+    
+    var minDate = payment_date_dim.bottom(1)[0].PaymentDate;
+    var maxDate = payment_date_dim.top(1)[0].PaymentDate;
+  
+    dc.lineChart('#total-cost-line-graph')  
+        .width(1000)  
+        .height(300)  
+        .margins({top: 10, right: 150, bottom: 30, left: 150})
+        .dimension(payment_date_dim)  
+        .group(total_spend_per_date)  
+        .transitionDuration(500)  
+        .x(d3.time.scale().domain([minDate,maxDate]))  
+        .xAxisLabel("Month")  
+        .yAxis().ticks(8);  
+}  
+
+
+
 function makePie(ndx) {
-    var type_dim = ndx.dimension(function(d) { return d["Type"]; });
+    var type_dim = ndx.dimension(dc.pluck("Type"));
     var total_cost_pie_chart = type_dim.group().reduceSum(dc.pluck('Sum'));
 
     dc.pieChart('#total-cost-pie-chart')
@@ -43,20 +64,3 @@ function makePie(ndx) {
         .renderLabel(true);
 }
 
-function TotalLineGraph(ndx) {  
-    var payment_date_dim = ndx.dimension(function(d) { return d["PaymentDate"]; });  
-    var total_spend_per_date = payment_date_dim.group().reduceSum(dc.pluck('Sum'));
-    
-    var minDate = payment_date_dim.bottom(1)[0].PaymentDate;
-    var maxDate = payment_date_dim.top(1)[0].PaymentDate;
-  
-    dc.lineChart('#total-cost-line-graph')  
-        .width(1000)  
-        .height(300)  
-        .dimension(payment_date_dim)  
-        .group(total_spend_per_date)  
-        .transitionDuration(500)  
-        .x(d3.time.scale().domain([minDate,maxDate]))  
-        .xAxisLabel("Month")  
-        .yAxis().ticks(4);  
-}  
