@@ -19,11 +19,56 @@ function makeGraphs(error, totalCost){
    var ndx=crossfilter(totalCost);
    makePie(ndx);
    TotalLineGraph(ndx);
+   StackedBarChartTotalCost(ndx);
    dc.renderAll();
 }
     
     
 /*skapar graf och hämtar data*/
+function StackedBarChartTotalCost(ndx){
+    var payment_date_dim = ndx.dimension(dc.pluck("PaymentDate"));
+    
+    var NettpayByMonth = payment_date_dim.group().reduceSum(function (d) {
+            if (d.Type === 'Nettpay') {
+                return +d.Sum;
+            } else {
+                return 0;
+            }
+        });
+    
+    var TaxesByMonth = payment_date_dim.group().reduceSum(function (d) {
+            if (d.Type === 'Taxes') {
+                return +d.Sum;
+            } else {
+                return 0;
+            }
+        });
+        
+    var SocialSecurityFeesByMonth = payment_date_dim.group().reduceSum(function (d) {
+            if (d.Type === 'Social Security Fees') {
+                return +d.Sum;
+            } else {
+                return 0;
+            }
+        });
+    
+  /*  var StackedBarChart = dc.barChart("#total-cost-stacked-bar-chart");*/
+   
+    dc.barChart('#total-cost-stacked-bar-chart')
+            .width(500)
+            .height(500)
+            .dimension(payment_date_dim)
+            .group(NettpayByMonth, "Nettpay")
+            .stack(TaxesByMonth, "Taxes")
+            .stack(SocialSecurityFeesByMonth, "Socia")
+            .x(d3.scale.ordinal())
+            .xUnits(dc.units.ordinal)
+            .legend(dc.legend().x(420).y(0).itemHeight(15).gap(5));
+        
+    
+}
+
+
 function TotalLineGraph(ndx) {  
     var payment_date_dim = ndx.dimension(dc.pluck("PaymentDate"));  
     var total_spend_per_date = payment_date_dim.group().reduceSum(dc.pluck('Sum'));
@@ -40,7 +85,7 @@ function TotalLineGraph(ndx) {
         .transitionDuration(500)  
         .x(d3.time.scale().domain([minDate,maxDate]))  
         .xAxisLabel("Month")  
-        .yAxis().ticks(8);  
+        .yAxis().ticks(8);
 }  
 
 
