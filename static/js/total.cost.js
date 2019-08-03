@@ -68,6 +68,7 @@ function StackedBarChartTotalCost(ndx){
             .x(d3.time.scale().domain([minDate,maxDate]))
             .xUnits(d3.time.months)
             .centerBar(true)
+            .barPadding(0.5)
             .legend(dc.legend().x(420).y(0).itemHeight(15).gap(5));
         
     
