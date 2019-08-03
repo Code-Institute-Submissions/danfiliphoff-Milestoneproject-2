@@ -26,9 +26,12 @@ function makeGraphs(error, totalCost){
     
 /*skapar graf och hämtar data*/
 function StackedBarChartTotalCost(ndx){
-    var payment_date_dim = ndx.dimension(dc.pluck("PaymentDate"));
+    var payment_date_dim_bar = ndx.dimension(dc.pluck("PaymentDate"));
     
-    var NettpayByMonth = payment_date_dim.group().reduceSum(function (d) {
+    var minDate = payment_date_dim_bar.bottom(1)[0].PaymentDate;
+    var maxDate = payment_date_dim_bar.top(1)[0].PaymentDate;
+    
+    var NettpayByMonth = payment_date_dim_bar.group().reduceSum(function (d) {
             if (d.Type === 'Nettpay') {
                 return +d.Sum;
             } else {
@@ -36,7 +39,7 @@ function StackedBarChartTotalCost(ndx){
             }
         });
     
-    var TaxesByMonth = payment_date_dim.group().reduceSum(function (d) {
+    var TaxesByMonth = payment_date_dim_bar.group().reduceSum(function (d) {
             if (d.Type === 'Taxes') {
                 return +d.Sum;
             } else {
@@ -44,25 +47,23 @@ function StackedBarChartTotalCost(ndx){
             }
         });
         
-    var SocialSecurityFeesByMonth = payment_date_dim.group().reduceSum(function (d) {
+    var SocialSecurityFeesByMonth = payment_date_dim_bar.group().reduceSum(function (d) {
             if (d.Type === 'Social Security Fees') {
                 return +d.Sum;
             } else {
                 return 0;
             }
         });
-    
-  /*  var StackedBarChart = dc.barChart("#total-cost-stacked-bar-chart");*/
    
     dc.barChart('#total-cost-stacked-bar-chart')
-            .width(500)
-            .height(500)
-            .dimension(payment_date_dim)
+            .width(1000)
+            .height(600)
+            .dimension(payment_date_dim_bar)
             .group(NettpayByMonth, "Nettpay")
             .stack(TaxesByMonth, "Taxes")
-            .stack(SocialSecurityFeesByMonth, "Socia")
-            .x(d3.scale.ordinal())
-            .xUnits(dc.units.ordinal)
+            .stack(SocialSecurityFeesByMonth, "Sociala")
+            .x(d3.time.scale().domain([minDate,maxDate]))
+            .xUnits(d3.time.months)
             .legend(dc.legend().x(420).y(0).itemHeight(15).gap(5));
         
     
