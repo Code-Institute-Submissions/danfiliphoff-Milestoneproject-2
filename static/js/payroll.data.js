@@ -18,18 +18,16 @@ function makePayrollDataGraphs(error, payrollData){
     
    var ndx=crossfilter(payrollData);
    GrossSalaryCostEffectivness(ndx);
-  
-
    dc.renderAll();
 }
 
-
+/*manipulera så den visar det jag vill*/
 function GrossSalaryCostEffectivness(ndx) {  
-    var payment_date_dim = ndx.dimension(dc.pluck("PaymentDate"));  
-    var total_spend_per_date = payment_date_dim.group().reduceSum(dc.pluck('Sum'));
+    let payment_date_dim = ndx.dimension(dc.pluck("PaymentDate"));  
+    let total_spend_per_date = payment_date_dim.group().reduceSum(dc.pluck('Sum'));
     
-    var minDate = payment_date_dim.bottom(1)[0].PaymentDate;
-    var maxDate = payment_date_dim.top(1)[0].PaymentDate;
+    let minDate = payment_date_dim.bottom(1)[0].PaymentDate;
+    let maxDate = payment_date_dim.top(1)[0].PaymentDate;
   
     dc.lineChart('#Gross-salary-cost-effectivness')  
         .width(1000)  
