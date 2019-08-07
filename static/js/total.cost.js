@@ -71,9 +71,34 @@ function StackedBarChartTotalCost(ndx){
             .x(d3.time.scale().domain([minDate,maxDate]))
             .xUnits(d3.time.months)
            /* .barPadding(0.3)/*adjusts with of each bar*/
-            .legend(dc.legend().x(420).y(0).itemHeight(15).gap(5));
-        
-    
+            .legend(dc.legend().x(420).y(0).itemHeight(15).gap(5))
+            .renderlet(function (chart) {
+                //Check if labels exist
+                var gLabels = chart.select(".labels");
+                if (gLabels.empty()){
+                    gLabels = chart.select(".chart-body").append('g').classed('labels', true);
+                }
+            
+                var gLabelsData = gLabels.selectAll("text").data(chart.selectAll(".bar")[0]);
+                gLabelsData.exit().remove(); //Remove unused elements
+                gLabelsData.enter().append("text") //Add new elements
+                gLabelsData
+                .attr('text-anchor', 'middle')
+                .attr('fill', 'white')
+                .text(function(d){
+                    text_object =  d3.select(d).datum().y
+                    console.log(text_object)
+                    return text_object
+                })
+                .attr('x', function(d){ 
+                    return +d.getAttribute('x') + (d.getAttribute('width')/2); 
+                })
+                .attr('y', function(d){ return +d.getAttribute('y') + 15; })
+                .attr('style', function(d){
+                    if (+d.getAttribute('height') < 18) return "display:none";
+                });
+            
+            });
 }
 
 
