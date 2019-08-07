@@ -56,19 +56,21 @@ function StackedBarChartTotalCost(ndx){
         });
    
     dc.barChart('#total-cost-stacked-bar-chart')
-            .width(1200)
+            .width(1500)
             .height(800)
-            .margins({top: 10, left: 80, right: 5, bottom: 50})
+            .margins({top: 10, left: 80, right: 1, bottom: 50})
             .dimension(payment_date_dim_bar)
             .group(NettpayByMonth, "Nettpay")
             .stack(TaxesByMonth, "Taxes")
             .stack(SocialSecurityFeesByMonth, "Sociala")
+            .renderLabel(true)/*gets total label for whole bar*/
             .elasticX(true)
-            .xAxisPadding(5)
+            .xAxisPadding(10)
+            .gap(15)
+            .centerBar(true)
             .x(d3.time.scale().domain([minDate,maxDate]))
             .xUnits(d3.time.months)
-            .centerBar(true)
-            .barPadding(0.5)
+           /* .barPadding(0.3)/*adjusts with of each bar*/
             .legend(dc.legend().x(420).y(0).itemHeight(15).gap(5));
         
     
