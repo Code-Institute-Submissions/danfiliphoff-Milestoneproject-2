@@ -6,9 +6,9 @@
 /*väntar med att skapa graf tills data är laddat*/
 queue()
     .defer(d3.csv, "data/total.cost.csv")
-    .await(makeGraphs);
+    .await(makeTotalCostGraps);
     
-function makeGraphs(error, totalCost){
+function makeTotalCostGraps(error, totalCost){
     
     var parseDate = d3.time.format("%Y-%m-%d").parse;
         totalCost.forEach(function(d){
