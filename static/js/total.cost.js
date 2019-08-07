@@ -72,7 +72,7 @@ function StackedBarChartTotalCost(ndx){
             .xUnits(d3.time.months)
            /* .barPadding(0.3)/*adjusts with of each bar*/
             .legend(dc.legend().x(420).y(0).itemHeight(15).gap(5))
-            .renderlet(function (chart) {
+            .on('renderlet', function (chart) {
                 //Check if labels exist
                 var gLabels = chart.select(".labels");
                 if (gLabels.empty()){
