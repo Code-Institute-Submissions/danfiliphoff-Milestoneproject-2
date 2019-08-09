@@ -28,10 +28,12 @@ function makePayrollDataGraphs(error, payrollData){
    cost_per_account(ndx);
    dc.renderAll();
 }
-
+/*5031*/
 
 function cost_per_account(ndx) {
-    var cost_per_account_dim = ndx.dimension(dc.pluck("Account"));
+   /* var cost_per_account_dim = ndx.dimension(dc.pluck("Account"));*/
+    var cost_per_account_dim = ndx.dimension(function(d) {return d.Account > 0;});
+    console.log(cost_per_account_dim);
     var cost_per_account_group = cost_per_account_dim.group().reduceSum(dc.pluck('Sum'));
 
     dc.pieChart('#cost-per-account')

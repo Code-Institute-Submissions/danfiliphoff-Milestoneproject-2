@@ -1,0 +1,422 @@
+"","PaymentDate","Code","Type","Account","Quantity","Sum"
+"54","2019-01-25",886,"Other Benefits",5179,2,1599
+"55","2019-05-25",170,"Recurring Salary Increment",5069,1,600
+"56","2019-04-25",170,"Recurring Salary Increment",5069,1,600
+"57","2019-03-25",170,"Recurring Salary Increment",5069,1,600
+"58","2019-02-25",170,"Recurring Salary Increment",5069,1,600
+"59","2019-01-25",170,"Recurring Salary Increment",5069,1,600
+"60","2018-12-25",170,"Recurring Salary Increment",5069,1,600
+"61","2018-11-25",170,"Recurring Salary Increment",5069,1,600
+"62","2018-11-25",170,"Recurring Salary Increment",5069,1,600
+"63","2018-09-25",170,"Recurring Salary Increment",5069,1,600
+"64","2018-08-25",170,"Recurring Salary Increment",5039,1,600
+"65","2018-07-25",170,"Recurring Salary Increment",5039,1,600
+"66","2018-06-25",170,"Recurring Salary Increment",5039,1,600
+"67","2018-11-25",970,"Advance Payment Deduction",1610,3,-343
+"68","2018-09-25",970,"Advance Payment Deduction",1610,0,283
+"69","2018-07-25",970,"Advance Payment Deduction",1610,2,-8185
+"70","2019-05-25",530,"Workers Vacation Deduction < 15 days ",5044,60,-8541
+"71","2019-04-25",530,"Workers Vacation Deduction < 15 days ",5044,48,-6917
+"72","2019-03-25",530,"Workers Vacation Deduction < 15 days ",5044,8,-1152
+"73","2019-02-25",530,"Workers Vacation Deduction < 15 days ",5044,18,-2734
+"74","2019-01-25",530,"Workers Vacation Deduction < 15 days ",5044,12,-1823
+"75","2018-11-25",530,"Workers Vacation Deduction < 15 days ",5044,8,-1189
+"76","2018-09-25",530,"Workers Vacation Deduction < 15 days ",5044,206,-28545
+"77","2018-08-25",530,"Workers Vacation Deduction < 15 days ",5044,260,-36043
+"78","2018-07-25",530,"Workers Vacation Deduction < 15 days ",5044,79,-10603
+"79","2019-05-25",531,"Workers Vacation Deduction > 14 days ",5044,30,-17500
+"80","2018-12-25",531,"Workers Vacation Deduction > 14 days ",5044,29,-16759
+"81","2018-11-25",531,"Workers Vacation Deduction > 14 days ",5044,11,-6357
+"82","2018-09-25",531,"Workers Vacation Deduction > 14 days ",5044,15,-10538
+"83","2018-08-25",531,"Workers Vacation Deduction > 14 days ",5044,63,-43666
+"84","2018-07-25",531,"Workers Vacation Deduction > 14 days ",5044,22,-12896
+"85","2018-06-25",531,"Workers Vacation Deduction > 14 days ",5044,13,-10221
+"86","2019-05-25",810,"Gasoline Compensation - Tax Exempt",5131,76,141
+"87","2019-04-25",810,"Gasoline Compensation - Tax Exempt",5131,79,146
+"88","2019-02-25",810,"Gasoline Compensation - Tax Exempt",5131,35,65
+"89","2019-01-25",810,"Gasoline Compensation - Tax Exempt",5131,270,500
+"90","2018-12-25",810,"Gasoline Compensation - Tax Exempt",5131,100,185
+"91","2018-11-25",810,"Gasoline Compensation - Tax Exempt",5131,780,1443
+"92","2018-07-25",810,"Gasoline Compensation - Tax Exempt",5131,310,574
+"93","2018-06-25",810,"Gasoline Compensation - Tax Exempt",5131,0,0
+"94","2019-05-25",800,"Gasoline Compensation - Taxed",5130,76,76
+"95","2019-04-25",800,"Gasoline Compensation - Taxed",5130,79,79
+"96","2019-02-25",800,"Gasoline Compensation - Taxed",5130,35,35
+"97","2019-01-25",800,"Gasoline Compensation - Taxed",5130,270,270
+"98","2018-12-25",800,"Gasoline Compensation - Taxed",5130,100,100
+"99","2018-11-25",800,"Gasoline Compensation - Taxed",5130,780,780
+"100","2018-07-25",800,"Gasoline Compensation - Taxed",5130,310,310
+"101","2018-06-25",800,"Gasoline Compensation - Taxed",5130,0,0
+"102","2019-03-25",132,"CEO Bonus",5070,1,77049
+"103","2019-04-25",130,"Managerial Bonus",5070,2,1000
+"104","2019-02-25",130,"Managerial Bonus",5070,2,4000
+"105","2018-12-25",130,"Managerial Bonus",5070,3000,3000
+"106","2018-11-25",130,"Managerial Bonus",5070,2,3000
+"107","2018-11-25",130,"Managerial Bonus",5070,2,5000
+"108","2018-09-25",130,"Managerial Bonus",5070,2000,2000
+"109","2018-07-25",130,"Managerial Bonus",5070,3000,3000
+"110","2019-05-25",528,"Vacation Pay-Managerial Bonus",5085,3,2926
+"111","2019-05-25",827,"Wellness Benefit",5673,1,400
+"112","2019-03-25",827,"Wellness Benefit",5673,800,800
+"113","2019-01-25",827,"Wellness Benefit",5673,1,0
+"115","2019-02-25",482,"Probationary Sick Leave Deduction-Salary",5047,20,-2306
+"116","2019-05-25",492,"Probationary Sick Leave Deduction-Hourly",5047,7,-649
+"117","2019-02-25",492,"Probationary Sick Leave Deduction-Hourly",5047,2,-214
+"118","2019-03-25",222,"Extra Free Hours Earned-Payout",5055,0,9783
+"119","2018-08-25",222,"Extra Free Hours Earned-Payout",5055,0,3385
+"120","2018-07-25",222,"Extra Free Hours Earned-Payout",5055,1,4834
+"121","2019-05-25",845,"Lunch/Dinner Deduction",3001,283,-13301
+"122","2019-04-25",845,"Lunch/Dinner Deduction",3001,340,-15640
+"123","2019-03-25",845,"Lunch/Dinner Deduction",3001,305,-14030
+"124","2019-02-25",845,"Lunch/Dinner Deduction",3001,311,-14306
+"125","2019-01-25",845,"Lunch/Dinner Deduction",3001,290,-13340
+"126","2018-12-25",845,"Lunch/Dinner Deduction",3001,371,-17066
+"127","2018-11-25",845,"Lunch/Dinner Deduction",3001,358,-16468
+"128","2018-11-25",845,"Lunch/Dinner Deduction",3001,316,-14536
+"129","2018-09-25",845,"Lunch/Dinner Deduction",3001,304,-13984
+"130","2018-08-25",845,"Lunch/Dinner Deduction",3001,233,-10718
+"131","2018-07-25",845,"Lunch/Dinner Deduction",3001,263,-12098
+"132","2018-06-25",845,"Lunch/Dinner Deduction",3001,302,-13590
+"133","2019-05-25",842,"Breakfast Deduction",3001,67,-1575
+"134","2019-04-25",842,"Breakfast Deduction",3001,98,-2254
+"135","2019-03-25",842,"Breakfast Deduction",3001,52,-1196
+"136","2019-02-25",842,"Breakfast Deduction",3001,61,-1403
+"137","2019-01-25",842,"Breakfast Deduction",3001,61,-1403
+"138","2018-12-25",842,"Breakfast Deduction",3001,56,-1288
+"139","2018-11-25",842,"Breakfast Deduction",3001,62,-1426
+"140","2018-11-25",842,"Breakfast Deduction",3001,58,-1334
+"141","2018-09-25",842,"Breakfast Deduction",3001,62,-1426
+"142","2018-08-25",842,"Breakfast Deduction",3001,66,-1518
+"143","2018-07-25",842,"Breakfast Deduction",3001,72,-1656
+"144","2018-06-25",842,"Breakfast Deduction",3001,68,-1530
+"145","2019-05-25",879,"Lunch/Dinner Benefit",5165,283,14433
+"146","2019-04-25",879,"Lunch/Dinner Benefit",5165,340,17680
+"147","2019-03-25",879,"Lunch/Dinner Benefit",5165,305,15860
+"148","2019-02-25",879,"Lunch/Dinner Benefit",5165,311,16172
+"149","2019-01-25",879,"Lunch/Dinner Benefit",5165,290,13920
+"150","2018-12-25",879,"Lunch/Dinner Benefit",5165,371,17808
+"151","2018-11-25",879,"Lunch/Dinner Benefit",5165,358,17184
+"152","2018-11-25",879,"Lunch/Dinner Benefit",5165,316,15168
+"153","2018-09-25",879,"Lunch/Dinner Benefit",5165,304,14592
+"154","2018-08-25",879,"Lunch/Dinner Benefit",5165,233,11184
+"155","2018-07-25",879,"Lunch/Dinner Benefit",5165,263,12624
+"156","2018-06-25",879,"Lunch/Dinner Benefit",5165,302,14798
+"157","2019-05-25",880,"Breakfast Benefit",5165,67,1709
+"158","2019-04-25",880,"Breakfast Benefit",5165,98,2548
+"159","2019-03-25",880,"Breakfast Benefit",5165,52,1352
+"160","2019-02-25",880,"Breakfast Benefit",5165,61,1586
+"161","2019-01-25",880,"Breakfast Benefit",5165,61,1464
+"162","2018-12-25",880,"Breakfast Benefit",5165,56,1344
+"163","2018-11-25",880,"Breakfast Benefit",5165,62,1488
+"164","2018-11-25",880,"Breakfast Benefit",5165,58,1392
+"165","2018-09-25",880,"Breakfast Benefit",5165,62,1488
+"166","2018-08-25",880,"Breakfast Benefit",5165,66,1584
+"167","2018-07-25",880,"Breakfast Benefit",5165,72,1728
+"168","2018-06-25",880,"Breakfast Benefit",5165,68,1666
+"169","2019-05-25",37,"Holiday Pay",5039,2,0
+"170","2019-05-25",37,"Holiday Pay",5069,3,0
+"171","2019-04-25",37,"Holiday Pay",5039,3,0
+"172","2019-04-25",37,"Holiday Pay",5069,1,0
+"173","2019-03-25",37,"Holiday Pay",5069,1,0
+"174","2019-02-25",37,"Holiday Pay",5039,4,0
+"175","2018-12-25",215,"Part Time Extra Hours",5039,8,1134
+"176","2019-03-25",50,"Salary-Part of Month",5030,1,771
+"177","2018-11-25",50,"Salary-Part of Month",5030,39,22575
+"178","2018-09-25",50,"Salary-Part of Month",5030,15,8683
+"179","2018-08-25",50,"Salary-Part of Month",5030,23,13313
+"180","2018-07-25",50,"Salary-Part of Month",5030,7,4486
+"181","2018-06-25",50,"Salary-Part of Month",5030,27,17243
+"182","2018-06-25",50,"Salary-Part of Month",5060,18,13355
+"183","2019-05-25",30,"Workers Salary",5031,15,281531
+"184","2019-04-25",30,"Workers Salary",5031,14,263781
+"185","2019-03-25",30,"Workers Salary",5031,14,258529
+"186","2019-02-25",30,"Workers Salary",5031,15,282443
+"187","2019-01-25",30,"Workers Salary",5031,15,282443
+"188","2018-12-25",30,"Workers Salary",5031,15,282443
+"189","2018-11-25",30,"Workers Salary",5031,13,245715
+"190","2018-11-25",30,"Workers Salary",5031,15,292159
+"191","2018-09-25",30,"Workers Salary",5031,15,276067
+"192","2018-08-25",30,"Workers Salary",5031,11,228435
+"193","2018-07-25",30,"Workers Salary",5031,11,235530
+"194","2018-06-25",30,"Workers Salary",5031,12,248174
+"195","2019-05-25",40,"Managerial Salary",5061,2,58173
+"196","2019-04-25",40,"Managerial Salary",5061,3,92254
+"197","2019-03-25",40,"Managerial Salary",5061,3,92254
+"198","2019-02-25",40,"Managerial Salary",5061,3,92254
+"199","2019-01-25",40,"Managerial Salary",5061,3,92254
+"200","2018-12-25",40,"Managerial Salary",5061,3,92254
+"201","2018-11-25",40,"Managerial Salary",5061,4,138154
+"202","2018-11-25",40,"Managerial Salary",5061,3,109654
+"203","2018-09-25",40,"Managerial Salary",5061,3,109654
+"204","2018-08-25",40,"Managerial Salary",5061,4,126926
+"205","2018-07-25",40,"Managerial Salary",5061,4,126026
+"206","2018-06-25",40,"Managerial Salary",5061,4,126026
+"207","2019-05-25",41,"CEO Salary",5061,1,45900
+"208","2019-04-25",41,"CEO Salary",5061,1,45900
+"209","2019-03-25",41,"CEO Salary",5061,1,45900
+"210","2019-02-25",41,"CEO Salary",5061,1,45900
+"211","2019-01-25",41,"CEO Salary",5061,1,45900
+"212","2018-12-25",41,"CEO Salary",5061,1,45900
+"225","2019-05-25",310,"Unsocial Hours Bonus",5038,726,16215
+"226","2019-05-25",310,"Unsocial Hours Bonus",5068,55,1232
+"227","2019-04-25",310,"Unsocial Hours Bonus",5038,803,17947
+"228","2019-04-25",310,"Unsocial Hours Bonus",5068,26,574
+"229","2019-03-25",310,"Unsocial Hours Bonus",5038,656,14662
+"230","2019-03-25",310,"Unsocial Hours Bonus",5068,64,1427
+"231","2019-02-25",310,"Unsocial Hours Bonus",5038,646,14427
+"232","2019-02-25",310,"Unsocial Hours Bonus",5068,46,1025
+"233","2019-01-25",310,"Unsocial Hours Bonus",5038,837,18696
+"234","2019-01-25",310,"Unsocial Hours Bonus",5068,89,1989
+"235","2018-12-25",310,"Unsocial Hours Bonus",5038,830,18551
+"236","2018-12-25",310,"Unsocial Hours Bonus",5068,20,435
+"237","2018-11-25",310,"Unsocial Hours Bonus",5038,728,16271
+"238","2018-11-25",310,"Unsocial Hours Bonus",5068,44,981
+"239","2018-11-25",310,"Unsocial Hours Bonus",5038,747,16684
+"240","2018-11-25",310,"Unsocial Hours Bonus",5068,25,552
+"241","2018-09-25",310,"Unsocial Hours Bonus",5038,740,16528
+"242","2018-09-25",310,"Unsocial Hours Bonus",5068,23,503
+"243","2018-08-25",310,"Unsocial Hours Bonus",5038,697,15578
+"244","2018-08-25",310,"Unsocial Hours Bonus",5068,16,357
+"245","2018-07-25",310,"Unsocial Hours Bonus",5038,810,18092
+"246","2018-07-25",310,"Unsocial Hours Bonus",5068,32,713
+"247","2018-06-25",310,"Unsocial Hours Bonus",5038,695,15522
+"248","2018-06-25",310,"Unsocial Hours Bonus",5068,16,350
+"249","2019-05-25",311,"Unsocial Hours Bonus (Night)",5038,45,886
+"250","2019-05-25",311,"Unsocial Hours Bonus (Night)",5068,5,98
+"251","2019-04-25",311,"Unsocial Hours Bonus (Night)",5038,66,1300
+"252","2019-04-25",311,"Unsocial Hours Bonus (Night)",5068,3,59
+"253","2019-03-25",311,"Unsocial Hours Bonus (Night)",5038,57,1122
+"254","2019-03-25",311,"Unsocial Hours Bonus (Night)",5068,22,437
+"255","2019-02-25",311,"Unsocial Hours Bonus (Night)",5038,29,571
+"256","2019-02-25",311,"Unsocial Hours Bonus (Night)",5068,16,314
+"257","2019-01-25",311,"Unsocial Hours Bonus (Night)",5038,43,847
+"258","2019-01-25",311,"Unsocial Hours Bonus (Night)",5068,30,589
+"259","2018-12-25",311,"Unsocial Hours Bonus (Night)",5038,38,748
+"260","2018-12-25",311,"Unsocial Hours Bonus (Night)",5068,5,98
+"261","2018-11-25",311,"Unsocial Hours Bonus (Night)",5038,28,551
+"262","2018-11-25",311,"Unsocial Hours Bonus (Night)",5068,13,255
+"263","2018-11-25",311,"Unsocial Hours Bonus (Night)",5038,28,541
+"264","2018-11-25",311,"Unsocial Hours Bonus (Night)",5068,8,157
+"265","2018-09-25",311,"Unsocial Hours Bonus (Night)",5038,43,847
+"266","2018-09-25",311,"Unsocial Hours Bonus (Night)",5068,3,59
+"267","2018-08-25",311,"Unsocial Hours Bonus (Night)",5038,102,2008
+"268","2018-07-25",311,"Unsocial Hours Bonus (Night)",5038,57,1122
+"269","2018-07-25",311,"Unsocial Hours Bonus (Night)",5068,10,196
+"270","2018-06-25",311,"Unsocial Hours Bonus (Night)",5038,44,866
+"272","2018-12-25",48,"Retroactive Pay",5042,2,2100
+"273","2018-11-25",48,"Retroactive Pay",5042,1,922
+"274","2018-08-25",48,"Retroactive Pay",5072,2,1800
+"293","2019-05-25",222,"Red Day - Payout",5085,0,13942
+"294","2018-11-25",529,"12,72% Vacation Pay Correction",5043,2,227
+"295","2018-07-25",529,"12,72% Vacation Pay Correction",5043,7,1810
+"296","2018-12-25",551,"Workers Vacation Pay (Saved Vacation)",5055,6,6360
+"297","2018-08-25",551,"Workers Vacation Pay (Saved Vacation)",5055,6,8331
+"298","2018-06-25",551,"Workers Vacation Pay (Saved Vacation)",5055,3,4165
+"299","2019-03-25",527,"Vacation Pay-Yearly Bonus",5073,0,9801
+"300","2019-05-25",518,"Managerial Vacation Deduction 4,6%",5074,10,-15069
+"301","2019-03-25",518,"Managerial Vacation Deduction 4,6%",5074,8,-11880
+"302","2019-02-25",518,"Managerial Vacation Deduction 4,6%",5074,10,-14491
+"303","2018-11-25",518,"Managerial Vacation Deduction 4,6%",5074,6,-12668
+"304","2018-09-25",518,"Managerial Vacation Deduction 4,6%",5074,10,-16156
+"305","2018-08-25",518,"Managerial Vacation Deduction 4,6%",5074,31,-49673
+"306","2018-07-25",518,"Managerial Vacation Deduction 4,6%",5074,7,-13080
+"307","2018-06-25",518,"Managerial Vacation Deduction 4,6%",5074,2,-4140
+"308","2019-03-25",540,"Vacation Payout",5055,11,15059
+"309","2018-11-25",540,"Vacation Payout",5055,6,6250
+"310","2018-09-25",540,"Vacation Payout",5055,7,7061
+"311","2018-08-25",540,"Vacation Payout",5055,30,42672
+"312","2018-07-25",540,"Vacation Payout",5055,10,12906
+"313","2018-06-25",540,"Vacation Payout",5055,2,2017
+"314","2018-06-25",540,"Vacation Payout",5085,6,11132
+"315","2019-05-25",526,"12,72% Vacation Pay",5043,12,17855
+"316","2019-04-25",526,"12,72% Vacation Pay",5043,14,20424
+"317","2019-03-25",526,"12,72% Vacation Pay",5043,15,15448
+"318","2019-02-25",526,"12,72% Vacation Pay",5043,15,11318
+"319","2019-01-25",526,"12,72% Vacation Pay",5043,18,14178
+"320","2018-12-25",526,"12,72% Vacation Pay",5043,18,23610
+"321","2018-11-25",526,"12,72% Vacation Pay",5043,16,20676
+"322","2018-11-25",526,"12,72% Vacation Pay",5043,17,17188
+"323","2018-09-25",526,"12,72% Vacation Pay",5043,16,17042
+"324","2018-08-25",526,"12,72% Vacation Pay",5043,15,20367
+"325","2018-07-25",526,"12,72% Vacation Pay",5043,14,14498
+"326","2018-06-25",526,"12,72% Vacation Pay",5043,16,14563
+"327","2019-05-25",525,"Workers Vacation Pay ",5055,31,33647
+"328","2019-04-25",525,"Workers Vacation Pay ",5055,6,8403
+"329","2019-03-25",525,"Workers Vacation Pay ",5055,1,1416
+"330","2019-02-25",525,"Workers Vacation Pay ",5055,3,3267
+"331","2019-01-25",525,"Workers Vacation Pay ",5055,2,2178
+"332","2018-12-25",525,"Workers Vacation Pay ",5055,13,13250
+"333","2018-11-25",525,"Workers Vacation Pay ",5055,10,10600
+"334","2018-11-25",525,"Workers Vacation Pay ",5055,3,3065
+"335","2018-09-25",525,"Workers Vacation Pay ",5055,34,47123
+"336","2018-08-25",525,"Workers Vacation Pay ",5055,89,104569
+"337","2018-07-25",525,"Workers Vacation Pay ",5055,26,30281
+"338","2018-06-25",525,"Workers Vacation Pay ",5055,6,8331
+"339","2019-05-25",517,"Managerial Vacation Pay  5,4%",5085,10,17690
+"340","2019-03-25",517,"Managerial Vacation Pay  5,4%",5085,8,13560
+"341","2019-02-25",517,"Managerial Vacation Pay  5,4%",5085,10,16239
+"342","2018-11-25",517,"Managerial Vacation Pay  5,4%",5085,6,14872
+"343","2018-09-25",517,"Managerial Vacation Pay  5,4%",5085,10,18966
+"344","2018-08-25",517,"Managerial Vacation Pay  5,4%",5085,31,58312
+"345","2018-07-25",517,"Managerial Vacation Pay  5,4%",5085,7,15355
+"346","2018-06-25",517,"Managerial Vacation Pay  5,4%",5085,2,4860
+"347","2019-01-25",600,"Deduction for Sick Leave 1-14",5047,24,-3577
+"348","2019-01-25",600,"Deduction for Sick Leave 1-14",5077,16,-3146
+"349","2018-12-25",600,"Deduction for Sick Leave 1-14",5047,75,-10251
+"350","2018-12-25",600,"Deduction for Sick Leave 1-14",5077,24,-3946
+"351","2018-11-25",600,"Deduction for Sick Leave 1-14",5047,55,-7679
+"352","2018-11-25",600,"Deduction for Sick Leave 1-14",5077,32,-5478
+"353","2018-11-25",600,"Deduction for Sick Leave 1-14",5047,18,-2460
+"354","2018-11-25",600,"Deduction for Sick Leave 1-14",5077,16,-2631
+"355","2018-09-25",600,"Deduction for Sick Leave 1-14",5047,66,-9149
+"356","2018-09-25",600,"Deduction for Sick Leave 1-14",5077,24,-4109
+"357","2018-08-25",600,"Deduction for Sick Leave 1-14",5047,12,-1788
+"358","2018-07-25",600,"Deduction for Sick Leave 1-14",5047,13,-1674
+"359","2018-06-25",600,"Deduction for Sick Leave 1-14",5047,40,-5496
+"360","2019-05-25",601,"Deduction for Sick Leave 15",5047,12,-6987
+"361","2019-01-25",601,"Deduction for Sick Leave 16",5047,2,-1136
+"362","2018-12-25",601,"Deduction for Sick Leave 17",5047,9,-5111
+"363","2018-06-25",601,"Deduction for Sick Leave 18",5047,13,-7382
+"364","2019-05-25",600,"Deduction for Sick Leave 1-14 (Hourly)",5047,88,-12696
+"365","2019-04-25",600,"Deduction for Sick Leave 1-14 (Hourly)",5047,98,-14012
+"366","2019-04-25",600,"Deduction for Sick Leave 1-14 (Hourly)",5077,50,-8442
+"367","2019-03-25",600,"Deduction for Sick Leave 1-14 (Hourly)",5047,96,-14010
+"368","2019-02-25",600,"Deduction for Sick Leave 1-14 (Hourly)",5047,88,-13132
+"369","2019-01-25",480,"Sick Pay 2-14",5045,24,2862
+"370","2019-01-25",480,"Sick Pay 2-14",5075,8,1258
+"371","2018-12-25",480,"Sick Pay 2-14",5045,61,6604
+"372","2018-12-25",480,"Sick Pay 2-14",5075,16,2105
+"373","2018-11-25",480,"Sick Pay 2-14",5045,40,4528
+"374","2018-11-25",480,"Sick Pay 2-14",5075,24,3287
+"375","2018-11-25",480,"Sick Pay 2-14",5045,6,654
+"376","2018-11-25",480,"Sick Pay 2-14",5075,8,1052
+"377","2018-09-25",480,"Sick Pay 2-14",5045,50,5516
+"378","2018-09-25",480,"Sick Pay 2-14",5075,16,2191
+"379","2018-08-25",480,"Sick Pay 2-14",5045,6,715
+"380","2018-07-25",480,"Sick Pay 2-14",5045,13,1339
+"381","2018-06-25",480,"Sick Pay 2-14",5045,20,2089
+"382","2019-05-25",488,"Sick Pay Unsocial Hours Bonus",5045,32,572
+"383","2019-04-25",488,"Sick Pay Unsocial Hours Bonus",5045,49,876
+"384","2019-03-25",488,"Sick Pay Unsocial Hours Bonus",5045,57,1019
+"385","2019-02-25",488,"Sick Pay Unsocial Hours Bonus",5045,25,447
+"386","2019-01-25",488,"Sick Pay Unsocial Hours Bonus",5045,22,393
+"387","2018-12-25",488,"Sick Pay Unsocial Hours Bonus",5045,15,259
+"388","2018-12-25",488,"Sick Pay Unsocial Hours Bonus",5075,1,18
+"389","2018-11-25",488,"Sick Pay Unsocial Hours Bonus",5045,10,179
+"390","2018-11-25",488,"Sick Pay Unsocial Hours Bonus",5075,1,18
+"391","2018-09-25",488,"Sick Pay Unsocial Hours Bonus",5045,17,304
+"392","2018-08-25",488,"Sick Pay Unsocial Hours Bonus",5045,3,54
+"393","2019-03-25",489,"Sick Pay Unsocial Hours Bonus (Night)",5045,1,16
+"394","2018-12-25",489,"Sick Pay Unsocial Hours Bonus (Night)",5075,1,16
+"395","2018-11-25",489,"Sick Pay Unsocial Hours Bonus (Night)",5075,1,16
+"396","2018-09-25",489,"Sick Pay Unsocial Hours Bonus (Night)",5045,3,47
+"397","2019-05-25",480,"Sick Pay 2-14",5045,76,8770
+"398","2019-04-25",480,"Sick Pay 2-14",5045,80,9245
+"399","2019-04-25",480,"Sick Pay 2-14",5075,34,4606
+"400","2019-03-25",480,"Sick Pay 2-14",5045,73,8553
+"401","2019-02-25",480,"Sick Pay 2-14",5045,88,10506
+"402","2018-06-25",490,"Sick Pay 2-14 (Hourly)",5045,6,624
+"403","2019-05-25",490,"Sick Pay 2-14 (Hourly)",5045,7,649
+"404","2019-03-25",490,"Sick Pay 2-14 (Hourly)",5045,6,642
+"405","2019-02-25",490,"Sick Pay 2-14 (Hourly)",5045,10,1071
+"406","2019-05-25",917,"Taxes",2711,-1,196304
+"407","2019-04-25",917,"Taxes",2711,-1,157659
+"408","2019-03-25",917,"Taxes",2711,-1,188627
+"409","2019-02-25",917,"Taxes",2711,-1,132713
+"410","2019-01-25",917,"Taxes",2711,-1,138544
+"411","2018-12-25",917,"Taxes",2711,-1,175066
+"412","2018-11-25",917,"Taxes",2711,-1,162075
+"413","2018-11-25",917,"Taxes",2711,-1,151861
+"414","2018-09-25",917,"Taxes",2711,-1,154086
+"415","2018-08-25",917,"Taxes",2711,-1,166377
+"416","2018-07-25",917,"Taxes",2711,-1,143479
+"417","2018-06-25",917,"Taxes",2711,-1,143381
+"418","2019-05-25",540,"Vacation Payout",5085,3,5521
+"419","2019-05-25",541,"Vacation Payout",5085,45,82817
+"420","2019-05-25",0,"Social Security Fees",5400,0,150527
+"421","2019-04-25",0,"Social Security Fees",5400,0,125062
+"422","2019-03-25",0,"Social Security Fees",5400,0,128694
+"423","2019-02-25",0,"Social Security Fees",5400,0,108032
+"424","2019-01-25",0,"Social Security Fees",5400,0,113140
+"425","2018-12-25",0,"Social Security Fees",5400,0,135969
+"426","2018-11-25",0,"Social Security Fees",5400,0,125107
+"427","2018-11-25",0,"Social Security Fees",5400,0,120108
+"428","2018-09-25",0,"Social Security Fees",5400,0,121615
+"429","2018-08-25",0,"Social Security Fees",5400,0,131897
+"430","2018-07-25",0,"Social Security Fees",5400,0,112101
+"431","2018-06-25",0,"Social Security Fees",5400,0,114562
+"432","2019-05-25",10,"Hourly Wage",5032,45,6021
+"433","2019-04-25",10,"Hourly Wage",5032,45,6021
+"434","2019-03-25",10,"Hourly Wage",5032,25,3345
+"435","2019-02-25",10,"Hourly Wage",5032,35,4683
+"436","2019-01-25",10,"Hourly Wage",5032,35,4683
+"437","2018-12-25",10,"Hourly Wage",5032,183,24406
+"438","2018-11-25",10,"Hourly Wage",5032,45,6021
+"439","2018-11-25",10,"Hourly Wage",5032,40,5352
+"440","2018-09-25",10,"Hourly Wage",5032,40,5352
+"441","2018-08-25",10,"Hourly Wage",5032,10,1338
+"442","2018-07-25",10,"Hourly Wage",5032,35,4683
+"443","2018-06-25",10,"Hourly Wage",5032,45,6021
+"444","2019-05-25",15,"Hourly Wage (Extra)",5033,1013,126096
+"445","2019-04-25",15,"Hourly Wage (Extra)",5033,1182,143874
+"446","2019-03-25",15,"Hourly Wage (Extra)",5033,901,109075
+"447","2019-02-25",15,"Hourly Wage (Extra)",5033,641,77963
+"448","2019-01-25",15,"Hourly Wage (Extra)",5033,813,97947
+"449","2018-12-25",15,"Hourly Wage (Extra)",5033,1393,169659
+"450","2018-11-25",15,"Hourly Wage (Extra)",5033,1203,149389
+"451","2018-11-25",15,"Hourly Wage (Extra)",5033,1016,124005
+"452","2018-09-25",15,"Hourly Wage (Extra)",5033,988,120772
+"453","2018-08-25",15,"Hourly Wage (Extra)",5033,1219,149455
+"454","2018-07-25",15,"Hourly Wage (Extra)",5033,927,115612
+"455","2018-06-25",15,"Hourly Wage (Extra)",5033,813,102515
+"456","2019-05-25",625,"Leave of Absence-Monthly",5047,30,-10960
+"457","2019-04-25",625,"Leave of Absence-Monthly",5047,31,-10850
+"458","2019-03-25",625,"Leave of Absence-Monthly",5047,56,-34764
+"459","2019-02-25",625,"Leave of Absence-Monthly",5047,62,-34764
+"460","2019-01-25",625,"Leave of Absence-Monthly",5047,62,-34764
+"461","2018-12-25",625,"Leave of Absence-Monthly",5047,30,-23914
+"462","2018-11-25",625,"Leave of Absence-Monthly",5047,31,-23914
+"463","2018-08-25",625,"Leave of Absence-Monthly",5047,31,-24820
+"464","2018-07-25",625,"Leave of Absence-Monthly",5047,30,-24820
+"465","2018-06-25",625,"Leave of Absence-Monthly",5047,31,-24820
+"466","2019-05-25",628,"Leave of Absence <15 Workers",5047,11,-1551
+"467","2019-02-25",628,"Leave of Absence <15 Workers",5047,24,-3213
+"468","2019-01-25",628,"Leave of Absence <15 Workers",5047,28,-3357
+"469","2018-12-25",628,"Leave of Absence <15 Workers",5047,28,-3584
+"470","2018-11-25",628,"Leave of Absence <15 Workers",5047,6,-803
+"471","2018-09-25",628,"Leave of Absence <15 Workers",5047,32,-4614
+"472","2018-08-25",628,"Leave of Absence <15 Workers",5047,49,-7029
+"473","2018-07-25",628,"Leave of Absence <15 Workers",5047,47,-6696
+"474","2019-05-25",629,"Leave of Absence >14 Workers",5047,4,-3371
+"475","2019-04-25",629,"Leave of Absence >14 Workers",5047,4,-3280
+"476","2019-03-25",629,"Leave of Absence >14 Workers",5047,4,-3280
+"477","2019-02-25",629,"Leave of Absence >14 Workers",5047,4,-3280
+"478","2019-01-25",629,"Leave of Absence >14 Workers",5047,5,-4100
+"479","2018-12-25",629,"Leave of Absence >14 Workers",5047,5,-4100
+"480","2018-11-25",629,"Leave of Absence >14 Workers",5047,4,-3280
+"481","2018-11-25",629,"Leave of Absence >14 Workers",5047,25,-19791
+"482","2018-09-25",629,"Leave of Absence >14 Workers",5047,12,-9054
+"483","2018-08-25",629,"Leave of Absence >14 Workers",5047,24,-16792
+"484","2018-06-25",629,"Leave of Absence >14 Workers",5047,4,-3280
+"487","2019-05-25",521,"Saved Vacation Payout",5055,8,9188
+"488","2019-05-25",521,"Saved Vacation Payout",5085,14,25527
+"489","2019-05-25",520,"Saved Vacation Payout",5055,15,5595
+"490","2019-05-25",520,"Saved Vacation Payout",5085,3,5521
+"491","2019-03-25",610,"*Sick child leave-hourly",5047,18,-2734
+"492","2019-02-25",610,"*Sick child leave-hourly",5077,4,-737
+"493","2019-01-25",610,"*Sick child leave-hourly",5047,16,-2305
+"494","2018-11-25",610,"*Sick child leave-hourly",5047,23,-3372
+"495","2018-11-25",610,"*Sick child leave-hourly",5047,44,-5858
+"496","2018-09-25",610,"*Sick child leave-hourly",5047,7,-870
+"497","2019-05-25",995,"Rounding",3294,0,-1
+"498","2019-04-25",995,"Rounding",3294,0,-1
+"499","2019-03-25",995,"Rounding",3294,0,1
+"500","2019-02-25",995,"Rounding",3294,0,0
+"501","2019-01-25",995,"Rounding",3294,0,0
+"502","2018-12-25",995,"Rounding",3294,0,1
+"503","2018-11-25",995,"Rounding",3294,0,-1
+"504","2018-11-25",995,"Rounding",3294,0,-2
+"505","2018-09-25",995,"Rounding",3294,0,-1
+"506","2018-08-25",995,"Rounding",3294,0,-2
+"507","2018-07-25",995,"Rounding",3294,0,0
+"508","2018-06-25",995,"Rounding",3294,0,1
