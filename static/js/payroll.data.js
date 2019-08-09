@@ -7,6 +7,14 @@
 queue()
     .defer(d3.csv, "data/payroll.data.csv")
     .await(makePayrollDataGraphs);
+    
+
+
+    
+    
+    
+
+
 
 function makePayrollDataGraphs(error, payrollData){
     
@@ -17,26 +25,54 @@ function makePayrollDataGraphs(error, payrollData){
 
     
    var ndx=crossfilter(payrollData);
-   GrossSalaryCostEffectivness(ndx);
+   cost_per_account(ndx);
    dc.renderAll();
 }
 
-/*manipulera så den visar det jag vill*/
+
+function cost_per_account(ndx) {
+    var cost_per_account_dim = ndx.dimension(dc.pluck("Account"));
+    var cost_per_account_group = cost_per_account_dim.group().reduceSum(dc.pluck('Sum'));
+
+    dc.pieChart('#cost-per-account')
+        .height(1000)
+        .radius(200)
+        .innerRadius(100)
+        .transitionDuration(1500)
+        .dimension(cost_per_account_dim)
+        .group(cost_per_account_group)
+        .externalLabels(50)
+        /*8129071: har summerat ihopp för hand vill hitta kod som summerar ihopp åt mig. 
+        *100)/100 i slutet av formeln är för att få med 2 decimal tecken i procenten
+        */
+       /* .label(function(d){return d.key + " " + d.value + " " + "KR (" +  Math.round((d.value/(8129071/100))*100)/100 + "%)"})*/
+        .renderLabel(true);
+}
+
+
+
+/*manipulera så den visar det jag vill
 function GrossSalaryCostEffectivness(ndx) {  
     let payment_date_dim = ndx.dimension(dc.pluck("PaymentDate"));  
-    let total_spend_per_date = payment_date_dim.group().reduceSum(dc.pluck('Sum'));
+    add custom reducer?
+   ( TOTAL -skatt-sociala-förmåner)/arbetade timmar
+   jag behöver att koden hittar och adderar alla summor
+   jag behöver att koden hittar och adderar alla arbetade timmar
+   jag behöver att koden per månad delar summor/timmar
+   
     
+   
+
     let minDate = payment_date_dim.bottom(1)[0].PaymentDate;
     let maxDate = payment_date_dim.top(1)[0].PaymentDate;
   
-    dc.lineChart('#Gross-salary-cost-effectivness')  
+    dc.barChart('#Gross-salary-cost-effectivness')  
         .width(1000)  
         .height(300)  
-        .margins({top: 10, right: 150, bottom: 30, left: 150})
         .dimension(payment_date_dim)  
-        .group(total_spend_per_date)  
+        .group(gross_salary_cost_effectivness)  
         .transitionDuration(500)  
         .x(d3.time.scale().domain([minDate,maxDate]))  
         .xAxisLabel("Month")  
         .yAxis().ticks(8);
-}  
+}  */
