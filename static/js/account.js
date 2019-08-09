@@ -6,27 +6,25 @@
 /*väntar med att skapa graf tills data är laddat*/
 queue()
     .defer(d3.csv, "data/account.csv")
-    .await(makePayrollDataGraphs);
+    .await(makeAccountDataGraphs);
     
 
-function makePayrollDataGraphs(error, account){
+function makeAccountDataGraphs(error, account){
     
-    var parseDate = d3.time.format("%Y-%m-%d").parse;
+    /*var parseDate = d3.time.format("%Y-%m-%d").parse;
         account.forEach(function(d){
             d.PaymentDate = parseDate(d.PaymentDate);
-        });
+        });*/
 
     
    var ndx=crossfilter(account);
    cost_per_account(ndx);
    dc.renderAll();
 }
-/*5031*/
+
 
 function cost_per_account(ndx) {
     var cost_per_account_dim = ndx.dimension(dc.pluck("Account"));
-   /* var cost_per_account_dim = ndx.dimension(function(d) {return d.Account > 0;});
-    console.log(cost_per_account_dim);*/
     var cost_per_account_group = cost_per_account_dim.group().reduceSum(dc.pluck('Sum'));
 
     dc.pieChart('#cost-per-account')
@@ -36,12 +34,8 @@ function cost_per_account(ndx) {
         .transitionDuration(1500)
         .dimension(cost_per_account_dim)
         .group(cost_per_account_group)
-        .externalLabels(50)
-        /*8129071: har summerat ihopp för hand vill hitta kod som summerar ihopp åt mig. 
-        *100)/100 i slutet av formeln är för att få med 2 decimal tecken i procenten
-        */
-       /* .label(function(d){return d.key + " " + d.value + " " + "KR (" +  Math.round((d.value/(8129071/100))*100)/100 + "%)"})*/
-        .renderLabel(true);
+        .legend(dc.legend().x(400).y(10).itemHeight(13).gap(5))
+        .renderLabel(false);
 }
 
 
