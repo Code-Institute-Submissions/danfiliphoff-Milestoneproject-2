@@ -126,8 +126,10 @@ function TotalLineGraph(ndx) {
 function makePie(ndx) {
     var type_dim = ndx.dimension(dc.pluck("Type"));
     var total_cost_pie_chart = type_dim.group().reduceSum(dc.pluck('Sum'));
+    
 
     dc.pieChart('#total-cost-pie-chart')
+          
         .height(1000)
         .radius(200)
         .innerRadius(100)
