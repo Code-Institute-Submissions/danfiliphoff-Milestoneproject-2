@@ -40,9 +40,10 @@ function cost_per_account(ndx) {
             .itemHeight(13)
             .gap(5)
             /*why is d.value inte integer? varför är det en string? konverterar legendText allt till strings?*/
-            .legendText(function(d) {return d.key + " " + d.value + " " + "KR (" +  Math.round((d.value/(8129071/100))*100)/100 + "%)"})
+            .legendText(function(d) {return d.key + " " + d.value + " " + "KR (" 
+            +  Math.round((d.value/(8129071/100))*100)/100 + "%)"})
             )
-           .renderLabel(false);
+        .renderLabel(false);
 }
 
 
