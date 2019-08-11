@@ -71,6 +71,7 @@ function cost_per_type(ndx){
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
             .elasticY(true)
+            /*renderlet rotates labels on X axis*/
             .renderlet(function (chart) {
                     chart.selectAll("g.x text")
                       .attr('dx', '-135')
