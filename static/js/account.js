@@ -19,6 +19,7 @@ function makeAccountDataGraphs(error, account){
     
    var ndx=crossfilter(account);
    cost_per_account(ndx);
+   cost_per_type(ndx);
    dc.renderAll();
 }
 
@@ -39,13 +40,40 @@ function cost_per_account(ndx) {
             .y(10)
             .itemHeight(13)
             .gap(5)
-            /*why is d.value inte integer? varför är det en string? konverterar legendText allt till strings?*/
+            /*why is d.value inte integer? varför är det en string? konverterar
+            legendText allt till strings? om jag komenterar ut legend text visat
+            den ju alla konton*/
             .legendText(function(d) {return d.key + " " + d.value + " " + "KR (" 
             +  Math.round((d.value/(8129071/100))*100)/100 + "%)"})
             )
+            
         .renderLabel(false);
 }
 
+/*ska visa kostnad för varje löneart*/
+function cost_per_type(ndx){
+    var cost_per_type_dimension = ndx.dimension(dc.pluck("Type"));
+    var cost_per_type_group = cost_per_type_dimension.group().reduceSum(dc.pluck('Sum'));
+    
+    
+     dc.barChart('#Cost-Per-Type')
+            .width(1500)
+            .height(800)
+            .margins({top: 10, left: 80, right: 1, bottom: 50})
+            .dimension(cost_per_type_dimension)
+            .group(cost_per_type_group)
+            .transitionDuration(500)
+            .renderLabel(true)/*gets total label for whole bar*/
+            .elasticX(true)
+            .xAxisPadding(10)
+            .gap(15)
+            .centerBar(true)
+            .x(d3.scale.ordinal())
+            .xUnits(dc.units.ordinal)
+            .elasticY(true)
+            .xAxisLabel("Gender")
+            .yAxis().ticks(20);
+}
 
 
 /*manipulera så den visar det jag vill
