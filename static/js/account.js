@@ -54,6 +54,18 @@ function cost_per_account(ndx) {
 function cost_per_type(ndx){
     var cost_per_type_dimension = ndx.dimension(dc.pluck("Type"));
     var cost_per_type_group = cost_per_type_dimension.group().reduceSum(dc.pluck('Sum'));
+    var filtered_cost_per_type_group = remove_empty_bins(cost_per_type_group);
+    
+    function remove_empty_bins(cost_per_type_group) {
+    return {
+        all:function () {
+            return cost_per_type_group.all().filter(function(d) {
+                //return Math.abs(d.value) > 0.00001; // if using floating-point numbers
+                return d.value !== 0; // if integers only
+             });
+            }
+           };
+          }
     
     
      dc.barChart('#Cost-Per-Type')
@@ -61,7 +73,7 @@ function cost_per_type(ndx){
             .height(1000)
             .margins({top: 10, left: 80, right: 1, bottom: 200})
             .dimension(cost_per_type_dimension)
-            .group(cost_per_type_group)
+            .group(filtered_cost_per_type_group)
             .transitionDuration(500)
             .renderLabel(true)/*gets total label for whole bar*/
             .elasticX(true)
