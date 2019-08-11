@@ -1,0 +1,2 @@
+/*below hides y axis for accounts bar graph*/
+#Cost-Per-Type .axis.y { display: none; }

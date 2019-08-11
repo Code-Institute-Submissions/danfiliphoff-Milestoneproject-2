@@ -82,14 +82,14 @@ function cost_per_type(ndx){
             .centerBar(true)
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
-            .elasticY(true)
             /*renderlet rotates labels on X axis*/
             .renderlet(function (chart) {
                     chart.selectAll("g.x text")
                       .attr('dx', '-135')
-                      .attr('transform', "rotate(-35)");
-                })
-            .yAxis().ticks(20);
+                     /* nedan kod kontolllerar lutningen på texten i x axeln och alignement av text och bar*/
+                      .attr('transform', "translate(25,0) rotate(-35)");
+                });
+            
 }
 
 
