@@ -59,7 +59,7 @@ function cost_per_type(ndx){
      dc.barChart('#Cost-Per-Type')
             .width(1500)
             .height(1000)
-            .margins({top: 10, left: 80, right: 1, bottom: 50})
+            .margins({top: 10, left: 80, right: 1, bottom: 200})
             .dimension(cost_per_type_dimension)
             .group(cost_per_type_group)
             .transitionDuration(500)
@@ -74,7 +74,7 @@ function cost_per_type(ndx){
             .renderlet(function (chart) {
                     chart.selectAll("g.x text")
                       .attr('dx', '-135')
-                      .attr('transform', "rotate(-45)");
+                      .attr('transform', "rotate(-35)");
                 })
             .yAxis().ticks(20);
 }
