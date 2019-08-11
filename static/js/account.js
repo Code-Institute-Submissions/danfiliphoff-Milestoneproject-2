@@ -58,7 +58,7 @@ function cost_per_type(ndx){
     
      dc.barChart('#Cost-Per-Type')
             .width(1500)
-            .height(800)
+            .height(1000)
             .margins({top: 10, left: 80, right: 1, bottom: 50})
             .dimension(cost_per_type_dimension)
             .group(cost_per_type_group)
@@ -71,7 +71,11 @@ function cost_per_type(ndx){
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
             .elasticY(true)
-            .xAxisLabel("Gender")
+            .renderlet(function (chart) {
+                    chart.selectAll("g.x text")
+                      .attr('dx', '-135')
+                      .attr('transform', "rotate(-45)");
+                })
             .yAxis().ticks(20);
 }
 

@@ -27,10 +27,8 @@ function makeTotalCostGraps(error, totalCost){
 /*skapar graf och hämtar data*/
 function StackedBarChartTotalCost(ndx){
     var payment_date_dim_bar = ndx.dimension(dc.pluck("PaymentDate"));
-    
     var minDate = payment_date_dim_bar.bottom(1)[0].PaymentDate;
     var maxDate = payment_date_dim_bar.top(1)[0].PaymentDate;
-    
     var NettpayByMonth = payment_date_dim_bar.group().reduceSum(function (d) {
             if (d.Type === 'Nettpay') {
                 return +d.Sum;
