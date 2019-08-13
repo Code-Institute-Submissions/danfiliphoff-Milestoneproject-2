@@ -31,6 +31,7 @@ function makeAccountDataGraphs(error, account){
 function cost_per_account(ndx) {
     var cost_per_account_dim = ndx.dimension(dc.pluck("Account"));
     var cost_per_account_group = cost_per_account_dim.group().reduceSum(dc.pluck('Sum'));
+    
 
     dc.pieChart('#cost-per-account')
         .height(590)

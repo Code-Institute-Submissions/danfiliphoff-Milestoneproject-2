@@ -5,7 +5,7 @@
 
 /*väntar med att skapa graf tills data är laddat*/
 queue()
-    .defer(d3.csv, "data/total.cost.csv")
+    .defer(d3.csv, "data/total_cost.csv")
     .await(makeTotalCostGraps);
     
 function makeTotalCostGraps(error, totalCost){
