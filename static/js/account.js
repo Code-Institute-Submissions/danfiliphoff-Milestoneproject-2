@@ -87,7 +87,7 @@ function cost_per_type(ndx){
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
             /*renderlet rotates labels on X axis*/
-            .renderlet(function (chart) {
+            .on('renderlet',function (chart) {
                     chart.selectAll("g.x text")
                       .attr('dx', '-135')
                      /* nedan kod kontolllerar lutningen på texten i x axeln och alignement av text och bar*/
