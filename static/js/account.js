@@ -10,12 +10,16 @@ queue()
     
 
 function makeAccountDataGraphs(error, account){
-    
-    /*var parseDate = d3.time.format("%Y-%m-%d").parse;
-        account.forEach(function(d){
-            d.PaymentDate = parseDate(d.PaymentDate);
-        });*/
 
+   /* converts all accounts and Sums to integers*/
+    account.forEach(function(d){
+        d.Account = parseInt(d.Account, 10);
+    });
+    
+    account.forEach(function(d){
+        d.Sum = parseInt(d.Sum, 10);
+    });
+    
     
    var ndx=crossfilter(account);
    cost_per_account(ndx);
@@ -29,15 +33,16 @@ function cost_per_account(ndx) {
     var cost_per_account_group = cost_per_account_dim.group().reduceSum(dc.pluck('Sum'));
 
     dc.pieChart('#cost-per-account')
-        .height(1000)
+        .height(590)
+        .width(1000)
         .radius(200)
         .innerRadius(100)
         .transitionDuration(1500)
         .dimension(cost_per_account_dim)
         .group(cost_per_account_group)
         .legend(dc.legend()
-            .x(400)
-            .y(10)
+            .x(750)
+            .y(0)
             .itemHeight(13)
             .gap(5)
             /*why is d.value inte integer? varför är det en string? konverterar
@@ -60,7 +65,6 @@ function cost_per_type(ndx){
     return {
         all:function () {
             return cost_per_type_group.all().filter(function(d) {
-                //return Math.abs(d.value) > 0.00001; // if using floating-point numbers
                 return d.value !== 0; // if integers only
              });
             }
