@@ -46,11 +46,11 @@ function cost_per_account(ndx) {
             .y(0)
             .itemHeight(13)
             .gap(5)
-            /*why is d.value inte integer? varför är det en string? konverterar
-            legendText allt till strings? om jag komenterar ut legend text visat
-            den ju alla konton*/
-            .legendText(function(d) {return d.key + " " + d.value + " " + "KR (" 
-            +  Math.round((d.value/(8129071/100))*100)/100 + "%)"})
+            .legendText(
+                function(d) {
+                    console.log(d)/*för att se vilka nycklar (d.xx, d.något) som ska användas använd den här consolelog*/
+                    return d.name + " " + d.data + " " + "KR (" 
+            +  Math.round((d.data/(8129071/100))*100)/100 + "%)"})
             )
             
         .renderLabel(false);
