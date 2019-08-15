@@ -107,7 +107,7 @@ function TotalLineGraph(ndx) {
     var minDate = payment_date_dim.bottom(1)[0].PaymentDate;
     var maxDate = payment_date_dim.top(1)[0].PaymentDate;
   
-    dc.lineChart('#total-cost-line-graph')  
+    dc.lineChart('#Cost-Over-Time')  
         .width(1000)  
         .height(300)  
         .margins({top: 10, right: 150, bottom: 30, left: 150})

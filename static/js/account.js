@@ -10,6 +10,11 @@ queue()
     
 
 function makeAccountDataGraphs(error, account){
+    
+    var parseDate = d3.time.format("%Y-%m-%d").parse;
+    account.forEach(function(d){
+        d.PaymentDate = parseDate(d.PaymentDate);
+    });
 
    /* converts all accounts and Sums to integers*/
     account.forEach(function(d){
@@ -24,14 +29,34 @@ function makeAccountDataGraphs(error, account){
    var ndx=crossfilter(account);
    cost_per_account(ndx);
    cost_per_type(ndx);
+   cost_over_time(ndx);
    dc.renderAll();
 }
 
 
+function cost_over_time(ndx) {
+    var cost_over_time_dim = ndx.dimension(dc.pluck("PaymentDate"));  
+    var cost_over_time_group = cost_over_time_dim.group().reduceSum(dc.pluck('Sum'));
+    
+    var minDate = cost_over_time_dim.bottom(1)[0].PaymentDate;
+    var maxDate = cost_over_time_dim.top(1)[0].PaymentDate;
+  
+    dc.lineChart('#Cost-Over-Time')  
+        .width(1000)  
+        .height(300)  
+        .margins({top: 10, right: 150, bottom: 30, left: 150})
+        .dimension(cost_over_time_dim)  
+        .group(cost_over_time_group)  
+        .transitionDuration(500)  
+        .x(d3.time.scale().domain([minDate,maxDate]))  
+        .xAxisLabel("Month")  
+        .yAxis().ticks(8);
+}
+
 function cost_per_account(ndx) {
     var cost_per_account_dim = ndx.dimension(dc.pluck("Account"));
     var cost_per_account_group = cost_per_account_dim.group().reduceSum(dc.pluck('Sum'));
-    
+ 
 
     dc.pieChart('#cost-per-account')
         .height(590)
@@ -48,7 +73,7 @@ function cost_per_account(ndx) {
             .gap(5)
             .legendText(
                 function(d) {
-                    console.log(d)/*för att se vilka nycklar (d.xx, d.något) som ska användas använd den här consolelog*/
+                   /*console.log(d)/*för att se vilka nycklar (d.xx, d.något) som ska användas använd den här consolelog*/
                     return d.name + " " + d.data + " " + "KR (" 
             +  Math.round((d.data/(8129071/100))*100)/100 + "%)"})
             )
@@ -97,29 +122,3 @@ function cost_per_type(ndx){
             
 }
 
-
-/*manipulera så den visar det jag vill
-function GrossSalaryCostEffectivness(ndx) {  
-    let payment_date_dim = ndx.dimension(dc.pluck("PaymentDate"));  
-    add custom reducer?
-   ( TOTAL -skatt-sociala-förmåner)/arbetade timmar
-   jag behöver att koden hittar och adderar alla summor
-   jag behöver att koden hittar och adderar alla arbetade timmar
-   jag behöver att koden per månad delar summor/timmar
-   
-    
-   
-
-    let minDate = payment_date_dim.bottom(1)[0].PaymentDate;
-    let maxDate = payment_date_dim.top(1)[0].PaymentDate;
-  
-    dc.barChart('#Gross-salary-cost-effectivness')  
-        .width(1000)  
-        .height(300)  
-        .dimension(payment_date_dim)  
-        .group(gross_salary_cost_effectivness)  
-        .transitionDuration(500)  
-        .x(d3.time.scale().domain([minDate,maxDate]))  
-        .xAxisLabel("Month")  
-        .yAxis().ticks(8);
-}  */
