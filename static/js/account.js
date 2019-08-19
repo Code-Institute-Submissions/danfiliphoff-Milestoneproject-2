@@ -58,7 +58,9 @@ function cost_per_account(ndx) {
     var cost_per_account_group = cost_per_account_dim.group().reduceSum(dc.pluck('Sum'));
  
     /*räknar ihopp totalen men funkar ej*/
-   var total= cost_per_account_dim.groupAll().reduce();
+   var total= cost_per_account_dim.groupAll().reduceSum(function (d) {
+       return +d.Sum;
+   });
    console.log(total);
 
     dc.pieChart('#cost-per-account')
@@ -76,12 +78,18 @@ function cost_per_account(ndx) {
             .gap(5)
             .legendText(
                 function(d) {
-                   /*console.log(d)/*för att se vilka nycklar (d.xx, d.något) som ska användas använd den här consolelog*/
+                  /* console.log(d);för att se vilka nycklar (d.xx, d.något) som ska användas använd den här consolelog*/
                     return d.name + " " + d.data + " " + "KR (" 
             +  Math.round((d.data/(8129071/100))*100)/100 + "%)"})
             )
             
         .renderLabel(false);
+        
+    dc.numberDisplay("#total")
+        .valueAccessor(function(d){
+            console.log(d);
+            return +d.Sum})
+        .group(total);
 }
 
 /*ska visa kostnad för varje löneart*/
