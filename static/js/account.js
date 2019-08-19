@@ -57,6 +57,9 @@ function cost_per_account(ndx) {
     var cost_per_account_dim = ndx.dimension(dc.pluck("Account"));
     var cost_per_account_group = cost_per_account_dim.group().reduceSum(dc.pluck('Sum'));
  
+    /*räknar ihopp totalen men funkar ej*/
+   var total= cost_per_account_dim.groupAll().reduce();
+   console.log(total);
 
     dc.pieChart('#cost-per-account')
         .height(590)
