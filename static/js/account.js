@@ -62,6 +62,14 @@ function cost_per_account(ndx) {
        return +d.Sum;
    });
    console.log(total);
+   
+    dc.numberDisplay("#total")
+        .valueAccessor(function(d){
+            console.log(d);
+            return +d.Sum})
+        .group(total);
+
+         
 
     dc.pieChart('#cost-per-account')
         .height(590)
@@ -83,14 +91,7 @@ function cost_per_account(ndx) {
                     return d.name + " " + d.data + " " + "KR (" 
             +  Math.round((d.data/(8129071/100))*100)/100 + "%)"})
             )
-            
         .renderLabel(false);
-        
-    dc.numberDisplay("#total")
-        .valueAccessor(function(d){
-            console.log(d);
-            return +d.Sum})
-        .group(total);
 }
 
 /*ska visa kostnad för varje löneart*/

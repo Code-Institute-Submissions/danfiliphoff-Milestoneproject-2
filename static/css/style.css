@@ -1,2 +1,21 @@
+/*--------HEADER-------*/
+.paddingtitle{
+    padding-top:25px;
+    text-align: center;
+}
+
+.title {
+    font-family: "Nunito", Arial;
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 50px;
+    text-transform: uppercase;
+    color:#004054;
+    text-decoration: none !important;
+    top: 0.5%;
+    position: relative;
+}
+
+
 /*below hides y axis for accounts bar graph*/
 #Cost-Per-Type .axis.y { display: none; }
