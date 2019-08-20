@@ -71,6 +71,7 @@ function cost_per_account(ndx) {
         .transitionDuration(1500)
         .dimension(cost_per_account_dim)
         .group(cost_per_account_group)
+        .slicesCap(26)
         .legend(dc.legend()
             .x(750)
             .y(0)
