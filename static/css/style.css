@@ -1,3 +1,5 @@
+
+
 /*--------HEADER-------*/
 .paddingtitle{
     padding-top:25px;
@@ -15,6 +17,80 @@
     top: 0.5%;
     position: relative;
 }
+
+/*--------Index-------*/
+#index-body-size{
+    position: relative;
+    height: 100%;
+}
+#indexcontent{
+    text-align: center;
+    margin-top: 1%;
+}
+
+#center-btn{
+    margin-right: 20px;
+}
+
+.mainbutton{
+    border-radius: 50%;
+    color: #004054;
+    background: radial-gradient(#5adae9, #017296);
+    height: 150px;
+    width: 150px;
+    font-family: "Nunito", Arial;
+    font-weight: 800;
+    font-size:16px;
+    border: 3px solid #00516b;
+    transition: all 0.5s;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 22px;
+    margin-top: 22px;
+    margin-left: 40px;
+}
+
+.mainbutton:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.mainbutton span{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.mainbutton span:after{
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.mainbutton:hover span{
+  padding-right: 25px;
+}
+
+.mainbutton:hover span:after{
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+/*--------GENERAL-------*/
+#index-background{
+    position: relative;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-image: url("../static/pictures/html_background.jpg");
+    height: 100%;
+}
+
 
 
 /*below hides y axis for accounts bar graph*/

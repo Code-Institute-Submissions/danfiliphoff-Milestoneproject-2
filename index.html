@@ -7,22 +7,42 @@
     <title>Payroll Dashboard</title>
     <link rel="stylesheet" href="static/css/style.css" type="text/css" />
     <link rel="stylesheet" href="" type="text/css" />
+    <link rel="stylesheet" href="static/pictures/html_background.jpg" type="image/jpg" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
-<body>
-    <header>
-        <!--*******Title*********--> 
-            <div >
-               <div class="row">
-                    <h1 class="col-md-12 paddingtitle title">
-                         <a href="index.html" class="middle title">
-                             <span class="indextitlemobile">Payroll Cost Overview</span>
-                         </a>
-                    </h1>
-               </div>
+<body id="index-body-size">
+    <div class="container-fluid" id="index-background">
+        <header>
+            <!--*******Title*********--> 
+                <div >
+                   <div class="row">
+                        <h1 class="col-md-12 paddingtitle title">
+                             <a href="index.html" class="middle title">
+                                 <span class="indextitlemobile">Payroll Cost Overview</span>
+                             </a>
+                        </h1>
+                   </div>
+                </div>
+        </header>
+         <!--****** Navigation Buttons******-->        
+        <div class="mobile" id="indexcontent">
+            <div class="row" id="center-btn">
+                <div class="col-md-12">
+                    <form style="display: inline" action="account.html" method="get">
+                        <button class="mainbutton">
+                            <span>Costs Breakdown</span>
+                        </button>
+                    </form>
+                    <form style="display: inline" action="total_cost.html" method="get">
+                        <button class="mainbutton">
+                            <span>Total Costs</span>
+                        </button>
+                    </form>
+                </div>
             </div>
-    </header>
+        </div>
+    </div>
     
     
    
