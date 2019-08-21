@@ -91,6 +91,27 @@
     height: 100%;
 }
 
+.conatainer-topics{
+     text-align: justify;
+     max-width: 600px;
+     margin-left: 34.5%;
+}
+
+.topic-header{
+  font-family: "Nunito", Arial;
+  font-weight: 700;
+  font-size:  30px;
+  color:#004054;
+  text-align: center;
+}
+
+.topic-text{
+  font-family: "Nunito", Arial;
+  color:black;
+  font-size: 18px;
+  text-decoration: none!important;
+}
+
 
 
 /*below hides y axis for accounts bar graph*/
