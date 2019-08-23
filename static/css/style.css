@@ -31,6 +31,10 @@
     margin-top: 1%;
 }
 
+#welcome-text{
+    max-width: 100px;
+}
+
 #center-btn{
     margin-right: 20px;
 }
@@ -110,6 +114,8 @@
   color:black;
   font-size: 18px;
   text-decoration: none!important;
+  max-width: 221px;
+  text-align: justify;
 }
 
 
@@ -380,10 +386,56 @@ img:hover{
         min-width:0px;
     }
     
+    
+}
+
+@media (min-width: 1442px){
     .topic-text{
-        text-align: left;
-        margin-right: -15px;
-        margin-left: -15px;
+        margin-left: 1094px;
+        font-size: 24px;
+        max-width: 369px;
+    }
+}
+
+@media (min-width: 1026px)and (max-width: 1441px){
+    .topic-text{
+        margin-left: 560px;
+        font-size: 20px;
+        max-width: 301px;
+    }
+}
+
+@media (min-width: 780px) and (max-width: 1025px){
+    .topic-text{
+        margin-left: 360px;
+        font-size: 20px;
+        max-width: 301px;
+    }
+}
+
+
+
+@media (min-width: 471px) and (max-width: 769px){
+    .topic-text{
+        margin-left: 271px;
+        font-size: 12px;
+        font-weight: 600;
+        max-width: 222px;
+    }
+}
+
+@media (min-width: 377px) and (max-width: 470px){
+    .topic-text{
+        margin-left: 99px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 376px){
+    .topic-text{
+        margin-left: 70px;
+        font-size: 12px;
+        max-width: 230px;
     }
 }
 
@@ -396,4 +448,9 @@ img:hover{
    .navbar-nav>li>.dropdown-menu{
        min-width: 257px;
    }
+   
+   .topic-text{
+        margin-left: 54px;
+        font-size: 12px;
+    }
 }
