@@ -95,11 +95,7 @@
     width: 100%;
 }
 
-.conatainer-topics{
-     text-align: justify;
-     max-width: 600px;
-     margin-left: 34.5%;
-}
+
 
 .topic-header{
   font-family: "Nunito", Arial;
@@ -220,3 +216,184 @@ img:hover{
     font-weight: 800;
 }
 
+/*-------------MEDIA QUERYS-----------*/
+@media  (min-width: 769px) and (max-width: 1025px){
+    .logo{
+        max-height: 75px;
+        margin-top: 15px;
+        margin-left:20px;
+    }
+}
+
+@media (min-width: 768px){
+    .foe-indefinite-duration{
+        height: 297px;
+    }
+    
+    .foe-time-limited{
+        height: 316px;
+    }
+    
+    #foe-background{
+        width: 750px;
+        margin-left:-90px;
+        border-radius: 0px 32px;
+    }
+}
+
+@media  (min-width: 724px) and (max-width: 1025px) {
+    .socialspacing{
+        margin-top:0px;
+        font-weight: 200;
+        font-size: 12px;
+    }
+}
+     
+@media  (min-width: 0px) and (max-width: 1025px) {
+    .mail-footer-medium {
+        margin-top: 10px;
+    }
+    
+    .social-links li a i{
+        width: 35px;
+        height: 35px;
+        font-size: 26px;
+    }
+}
+
+@media  (min-width: 427px) and (max-width: 768px) {
+    .title {
+        font-weight: 800;
+        font-size: 35px;
+        line-height: 30px;
+        padding-top: 20px;
+    }
+    
+    .topic-header{
+        font-size:  30px;
+    }
+}
+
+@media  (min-width: 0px) and (max-width: 798px) {
+    .logo{
+        max-height: 65px;
+        margin-top: 16px;
+        margin-bottom: 20px;
+        margin-left:15px;
+    }
+    
+    .navbar-nav>li>a{
+        line-height: 14px;
+    }
+    
+    #foe-background{
+        text-align: left;
+    }
+    
+    .navbar-style{
+    border: none;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+}
+
+@media  (min-width: 0px) and (max-width: 723px){
+    .dropbtn{
+        font-size: 25px;
+        border: none;
+        border-radius:7px;
+    }
+    
+    .socialspacing{
+        font-size: 9px;
+    }
+    
+    .social-links li a i{
+        width: 25px;
+        height: 25px;
+        padding: 10px 0;
+        border-radius: 50%;
+        font-size: 20px;
+        line-height: 4px;
+        text-align: center;
+        color:#004054;
+        background:#5adae9;
+        transition: all 0.35s ease-in-out;
+        -moz-transition: all 0.35s ease-in-out;
+        -webkit-transition: all 0.35s ease-in-out;
+        -o-transition: all 0.35s ease-in-out;
+    }
+
+    .mail-footer-medium li a i{
+        margin-top: 1px;
+        width: 25px;
+        height: 25px;
+        padding: 8px 0;
+        border-radius: 50%;
+        font-size: 19px;
+        font-weight: 800;
+        line-height: 8px;
+        text-align: center;
+        color:#004054;
+        background:#5adae9;
+        transition: all 0.35s ease-in-out;
+        -moz-transition: all 0.35s ease-in-out;
+        -webkit-transition: all 0.35s ease-in-out;
+        -o-transition: all 0.35s ease-in-out;
+    }
+}
+    
+@media  (min-width: 0px) and (max-width: 426px){
+    .title{
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 40px;
+        padding-top: 20px;
+    }
+    
+    .topic-header{
+        font-size:  25px;
+    }
+    
+    .socialspacing{
+        display:none;
+    }
+    
+    #email-heading{
+        font-size: 14px;
+    }
+    
+    #foe-background{
+       background-image: none; 
+       margin-right: -15px;
+       margin-left: -15px;
+    }
+    
+    .social-links{
+        margin-right: 0px;
+        margin-top: 33px;
+    }
+    
+    .sociallinks{
+        margin-right: 0px;
+        min-width:0px;
+    }
+    
+    .topic-text{
+        text-align: left;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+}
+
+@media (max-width: 320px){
+
+    .search-bar{
+        max-width: 79%;
+    }
+    
+   .navbar-nav>li>.dropdown-menu{
+       min-width: 257px;
+   }
+}
