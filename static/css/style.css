@@ -112,10 +112,11 @@
 .topic-text{
   font-family: "Nunito", Arial;
   color:black;
-  font-size: 18px;
+  font-size: 13px;
   text-decoration: none!important;
-  max-width: 221px;
   text-align: justify;
+  max-width: 203px;
+  margin: 0 auto;
 }
 
 
@@ -244,6 +245,11 @@ img:hover{
         width: 750px;
         margin-left:-90px;
         border-radius: 0px 32px;
+    }
+    
+    .topic-text{
+        font-size: 15px;
+        max-width: 295px;
     }
 }
 
@@ -389,55 +395,6 @@ img:hover{
     
 }
 
-@media (min-width: 1442px){
-    .topic-text{
-        margin-left: 1094px;
-        font-size: 24px;
-        max-width: 369px;
-    }
-}
-
-@media (min-width: 1026px)and (max-width: 1441px){
-    .topic-text{
-        margin-left: 560px;
-        font-size: 20px;
-        max-width: 301px;
-    }
-}
-
-@media (min-width: 780px) and (max-width: 1025px){
-    .topic-text{
-        margin-left: 360px;
-        font-size: 20px;
-        max-width: 301px;
-    }
-}
-
-
-
-@media (min-width: 471px) and (max-width: 769px){
-    .topic-text{
-        margin-left: 271px;
-        font-size: 12px;
-        font-weight: 600;
-        max-width: 222px;
-    }
-}
-
-@media (min-width: 377px) and (max-width: 470px){
-    .topic-text{
-        margin-left: 99px;
-        font-size: 12px;
-    }
-}
-
-@media (min-width: 321px) and (max-width: 376px){
-    .topic-text{
-        margin-left: 70px;
-        font-size: 12px;
-        max-width: 230px;
-    }
-}
 
 @media (max-width: 320px){
 
