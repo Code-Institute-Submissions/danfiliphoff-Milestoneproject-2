@@ -23,7 +23,7 @@
     position: fixed;
     height: 100%;
     width: 100%;
-    margin-top: -34px;
+    margin-top: -27px;
     margin-left: 0px;
 }
 #indexcontent{
@@ -43,8 +43,8 @@
     border-radius: 50%;
     color: #004054;
     background: radial-gradient(#5adae9, #017296);
-    height: 150px;
-    width: 150px;
+    height: 130px;
+    width: 130px;
     font-family: "Nunito", Arial;
     font-weight: 800;
     font-size:16px;
@@ -142,142 +142,35 @@
   height: 60px;
 }
 
-.logo{
-    background-repeat: no-repeat;
-    max-height: 100px;
-    margin-top: 12px;
-    margin-bottom: 20px;
-    margin-left:55px;
-}
-
-img:hover{
-  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-}
-
-.social-links{
-    list-style-type: none;
-    text-align:right;
-    margin-top: 12px;
-    margin-right: 24px;
-}
-
-.social-links li a i{
-    margin-right: 8px;
-    width: 40px;
-    height: 40px;
-    padding: 15px 0;
-    border-radius: 50%;
-    font-size: 25px;
-    line-height: 7px;
-    text-align: center;
-    color:#004054;
-    background:#5adae9;
-    transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
-}
-
-.social-links li a i:hover{
-    background:#ffffff ;
-}
-
-.mail-footer{
-    padding-bottom: 15px;
-    list-style-type: none;
-    margin-top: 15px;
-}
-
-.mail-footer li a i{
-    margin-top: 10px;
-    width: 40px;
-    height: 40px;
-    padding: 15px 0;
-    font-weight: 900;
-    border-radius: 50%;
-    font-size: 28px;
-    line-height: 7px;
-    text-align: center;
-    color:#004054;
-    background:#5adae9;
-    transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
-}
-
-.mail-footer li a i:hover{
-    background:#ffffff ;
-}
-
-.socialspacing{
-    color:#ffffff;
-    font-family: "Nunito", Arial;
-    text-transform: uppercase;
-    font-weight: 300;
-    text-decoration: none;
-    text-align:center;
-}
-
-.sociallinks{
-    margin-top:5px;
-    margin-left:auto;
-    margin-right:auto;
-    min-width: 50px;
-}
-
-.envelope{
-    font-weight: 800;
-}
 
 /*-------------MEDIA QUERYS-----------*/
-@media  (min-width: 769px) and (max-width: 1025px){
-    .logo{
-        max-height: 75px;
-        margin-top: 15px;
-        margin-left:20px;
+@media (max-width: 404px){
+    .mainbutton{
+        height: 118px;
+        width: 118px;
+        margin-left: 29px;
+    }
+}
+
+
+@media (max-width: 768px){
+    .mainbutton{
+        margin-top: 5px;
     }
 }
 
 @media (min-width: 768px){
-    .foe-indefinite-duration{
-        height: 297px;
-    }
-    
-    .foe-time-limited{
-        height: 316px;
-    }
-    
-    #foe-background{
-        width: 750px;
-        margin-left:-90px;
-        border-radius: 0px 32px;
-    }
     
     .topic-text{
         font-size: 15px;
         max-width: 295px;
     }
-}
-
-@media  (min-width: 724px) and (max-width: 1025px) {
-    .socialspacing{
-        margin-top:0px;
-        font-weight: 200;
-        font-size: 12px;
-    }
-}
-     
-@media  (min-width: 0px) and (max-width: 1025px) {
-    .mail-footer-medium {
-        margin-top: 10px;
+    
+    #index-body-size{
+    margin-top: -31px;
     }
     
-    .social-links li a i{
-        width: 35px;
-        height: 35px;
-        font-size: 26px;
-    }
+    
 }
 
 @media  (min-width: 427px) and (max-width: 768px) {
@@ -293,75 +186,8 @@ img:hover{
     }
 }
 
-@media  (min-width: 0px) and (max-width: 798px) {
-    .logo{
-        max-height: 65px;
-        margin-top: 16px;
-        margin-bottom: 20px;
-        margin-left:15px;
-    }
-    
-    .navbar-nav>li>a{
-        line-height: 14px;
-    }
-    
-    #foe-background{
-        text-align: left;
-    }
-    
-    .navbar-style{
-    border: none;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    }
-}
 
-@media  (min-width: 0px) and (max-width: 723px){
-    .dropbtn{
-        font-size: 25px;
-        border: none;
-        border-radius:7px;
-    }
-    
-    .socialspacing{
-        font-size: 9px;
-    }
-    
-    .social-links li a i{
-        width: 25px;
-        height: 25px;
-        padding: 10px 0;
-        border-radius: 50%;
-        font-size: 20px;
-        line-height: 4px;
-        text-align: center;
-        color:#004054;
-        background:#5adae9;
-        transition: all 0.35s ease-in-out;
-        -moz-transition: all 0.35s ease-in-out;
-        -webkit-transition: all 0.35s ease-in-out;
-        -o-transition: all 0.35s ease-in-out;
-    }
 
-    .mail-footer-medium li a i{
-        margin-top: 1px;
-        width: 25px;
-        height: 25px;
-        padding: 8px 0;
-        border-radius: 50%;
-        font-size: 19px;
-        font-weight: 800;
-        line-height: 8px;
-        text-align: center;
-        color:#004054;
-        background:#5adae9;
-        transition: all 0.35s ease-in-out;
-        -moz-transition: all 0.35s ease-in-out;
-        -webkit-transition: all 0.35s ease-in-out;
-        -o-transition: all 0.35s ease-in-out;
-    }
-}
     
 @media  (min-width: 0px) and (max-width: 426px){
     .title{
@@ -375,44 +201,11 @@ img:hover{
         font-size:  25px;
     }
     
-    .socialspacing{
-        display:none;
-    }
-    
-    #email-heading{
-        font-size: 14px;
-    }
-    
-    #foe-background{
-       background-image: none; 
-       margin-right: -15px;
-       margin-left: -15px;
-    }
-    
-    .social-links{
-        margin-right: 0px;
-        margin-top: 33px;
-    }
-    
-    .sociallinks{
-        margin-right: 0px;
-        min-width:0px;
-    }
-    
-    
+   
 }
 
 
 @media (max-width: 320px){
-
-    .search-bar{
-        max-width: 79%;
-    }
-    
-   .navbar-nav>li>.dropdown-menu{
-       min-width: 257px;
-   }
-   
    .topic-text{
         margin-left: 54px;
         font-size: 12px;
