@@ -5,43 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Payroll Dashboard</title>
-    /css:/
     <link rel="stylesheet" href="static/css/style.css" type="text/css" />
     <link rel="stylesheet" href="" type="text/css" />
-    /js folder:/
+    <link rel="stylesheet" href="static/pictures/html_background.jpg" type="image/jpg" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <script type="text/javascript" src="static/js/d3.min.js"></script>
     <script type="text/javascript" src="static/js/d3-time-format.v2.min.js"></script>
     <script type="text/javascript" src="static/js/crossfilter.min.js"></script>
     <script type="text/javascript" src="static/js/dc.min.js"></script>
     <script type="text/javascript" src="static/js/queue.min.js"></script>
     <script type="text/javascript" src="static/js/account.js"></script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 
-<body>
-    <header>
-    </header>
-    <!--*****Graphs******--> 
-    <div>
-        <!--*****Pie Chart******--> 
-        <div>
-            <h2>Cost per account</h2>
-            <div id="cost-per-account"></div>
-            <div id="total"></div>
-        </div>
-        <!--*****Bar Chart******--> 
-        <div>
-            <h2>Cost per Type</h2>
-            <div id="Cost-Per-Type"></div>
-        </div>
-         <!--*****Line Chart******--> 
-        <div>
-            <h2>Cost Over Time</h2>
-            <div id="Cost-Over-Time"></div>
-        </div>
+
+
+<body id="index-body-size">
+    <div class="container-fluid" id="index-background">
+        <header>
+            <!--*******Title*********--> 
+                <div >
+                   <div class="row">
+                        <h1 class="col-md-12 paddingtitle title">
+                             <a href="index.html" class="title">
+                                 <span>Payroll Cost Overview</span>
+                                 <br>
+                             </a>
+                        </h1>
+                   </div>
+                </div>
+        </header>
+        <body>
+            <!--****** Navigation Buttons******--> 
+            <div class="mobile" id="indexcontent">
+                <div class="row" id="center-btn">
+                    <div class="col-md-12">
+                        <form style="display: inline" action="total_cost.html" method="get">
+                            <button class="mainbutton">
+                                <span>Total<br> Costs</span>
+                            </button>
+                        </form>
+                        <form style="display: inline" action="account.html" method="get">
+                            <button class="mainbutton">
+                                <span>Cost Breakdown</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--*****Graphs******--> 
+            <div>
+                <!--*****Pie Chart******--> 
+                <div>
+                    <h2>Cost per account</h2>
+                    <div id="cost-per-account"></div>
+                    <div id="total"></div>
+                </div>
+                <!--*****Bar Chart******--> 
+                <div>
+                    <h2>Cost per Type</h2>
+                    <div id="Cost-Per-Type"></div>
+                </div>
+                 <!--*****Line Chart******--> 
+                <div>
+                    <h2>Cost Over Time</h2>
+                    <div id="Cost-Over-Time"></div>
+                </div>
+            </div> 
+        </body>
+        <!--****** Footer******--> 
+        <footer class="container-fluid footer-pinned">
+            <div class="row footerbackgrund">
+            </div>
+        </footer>
     </div>
     
-    <footer>
-    </footer>
     
+   
 </body>
+
+
+    
+    
