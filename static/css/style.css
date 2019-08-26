@@ -95,11 +95,15 @@
     background-repeat:no-repeat;
     background-size:cover;
     background-image: url("../pictures/html_background.jpg");
-    height: 100%;
+    height: 107%;
     width: 100%;
+    overflow:scroll;
 }
 
-
+.body-account{
+    padding-bottom:60px;
+    height: 100%;
+}
 
 .topic-header{
   font-family: "Nunito", Arial;
@@ -126,10 +130,9 @@
 
 /*--------------FOOTER-------------------*/
 .footer-pinned{
-   position:absolute;
+   position:static;
    bottom:0;
    width:100%;
-   height:100px;
 }
 
 .footerbackgrund{
