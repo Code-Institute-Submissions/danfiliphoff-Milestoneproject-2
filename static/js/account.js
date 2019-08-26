@@ -30,6 +30,7 @@ function makeAccountDataGraphs(error, account){
    cost_per_account(ndx);
    cost_per_type(ndx);
    cost_over_time(ndx);
+   pay_deductions(ndx);
    dc.renderAll();
 }
 
@@ -51,6 +52,49 @@ function cost_over_time(ndx) {
         .x(d3.time.scale().domain([minDate,maxDate]))  
         .xAxisLabel("Month")  
         .yAxis().ticks(8);
+}
+
+
+/*måste få var pay_deductions_account_group att bara välja minus summor*/
+function pay_deductions(ndx) {
+    var pay_deductions_account_dim = ndx.dimension(dc.pluck("Account"));
+    var pay_deductions_account_group = pay_deductions_account_dim.group().reduceSum(dc.pluck('Sum'));
+ 
+    /*räknar ihopp totalen men funkar ej
+   var total= pay_deductions_account_dim.groupAll().reduceSum(function (d) {
+       return +d.Sum;
+   });
+   console.log(total);
+   
+    dc.numberDisplay("#total")
+        .valueAccessor(function(d){
+            console.log(d);
+            return +d.Sum})
+        .group(total);*/
+
+         
+
+    dc.pieChart('#pay-deductions')
+        .height(590)
+        .width(1000)
+        .radius(200)
+        .innerRadius(100)
+        .transitionDuration(1500)
+        .dimension(pay_deductions_account_dim)
+        .group(pay_deductions_account_group)
+        .slicesCap(6)
+        .legend(dc.legend()
+            .x(750)
+            .y(0)
+            .itemHeight(13)
+            .gap(5)
+            .legendText(
+                function(d) {
+                  /* console.log(d);för att se vilka nycklar (d.xx, d.något) som ska användas använd den här consolelog*/
+                    return d.name + " " + d.data + " " + "KR (" 
+            +  Math.round((d.data/(8129071/100))*100)/100 + "%)"})
+            )
+        .renderLabel(false);
 }
 
 function cost_per_account(ndx) {
@@ -79,7 +123,7 @@ function cost_per_account(ndx) {
         .transitionDuration(1500)
         .dimension(cost_per_account_dim)
         .group(cost_per_account_group)
-        .slicesCap(26)
+        .slicesCap(6)
         .legend(dc.legend()
             .x(750)
             .y(0)
