@@ -43,14 +43,13 @@ function cost_over_time(ndx) {
   
     dc.lineChart('#Cost-Over-Time')  
         .width(1000)  
-        .height(300)  
+        .height(500)  
         .margins({top: 10, right: 150, bottom: 30, left: 150})
         .dimension(cost_over_time_dim)  
         .group(cost_over_time_group)  
         .transitionDuration(500)  
-        .x(d3.time.scale().domain([minDate,maxDate]))  
-        .xAxisLabel("Month")  
-        .yAxis().ticks(8);
+        .x(d3.time.scale().domain([minDate,maxDate]))
+        .yAxis().ticks(15);
 }
 
 
@@ -75,8 +74,8 @@ function cost_per_account(ndx) {
          
 
     dc.pieChart('#cost-per-account')
-        .height(590)
-        .width(1000)
+        .height(500)
+        .width(500)
         .radius(240)
         .innerRadius(150)
         .transitionDuration(1500)
@@ -84,8 +83,8 @@ function cost_per_account(ndx) {
         .group(cost_per_account_group)
         .slicesCap(6)
         .legend(dc.legend()
-            .x(400)
-            .y(240)
+            .x(150)
+            .y(195)
             .itemHeight(13)
             .gap(5)
             .legendText(
