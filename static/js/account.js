@@ -50,7 +50,7 @@ function cost_over_time(ndx) {
         .transitionDuration(500)  
         .x(d3.time.scale().domain([minDate,maxDate]))
         .yAxis().ticks(15);
-}
+        }
 
 
 

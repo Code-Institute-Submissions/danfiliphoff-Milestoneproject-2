@@ -126,7 +126,17 @@
 
 
 /*below hides y axis for accounts bar graph*/
-#Cost-Per-Type .axis.y { display: none; }
+#Cost-Per-Type
+ .axis.y { display: none; }
+ 
+.line {
+         fill: none;
+         stroke: grey;
+         stroke-width: 6px;
+         }
+    
+
+
 
 /*--------------FOOTER-------------------*/
 .footer-pinned{
