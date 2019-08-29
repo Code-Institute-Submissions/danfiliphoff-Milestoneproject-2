@@ -123,18 +123,29 @@
   margin: 0 auto;
 }
 
-
+/*--------------GRAPHS AND CHArts-------------------*/
 
 /*below hides y axis for accounts bar graph*/
 #Cost-Per-Type
  .axis.y { display: none; }
- 
+
+/*below make sures that line grap renders as a line and not as an area*/ 
 .line {
          fill: none;
          stroke: grey;
          stroke-width: 6px;
          }
-    
+
+
+#Cost-Over-Time > svg > g > g.axis.x {
+    font-size: 13.5px;
+}
+
+/*#Cost-Over-Time > svg > g > g.axis.x > g:nth-child(5){
+    font-size: 10px;
+}*/
+
+
 
 
 
