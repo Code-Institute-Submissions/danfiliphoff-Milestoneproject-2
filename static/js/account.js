@@ -46,6 +46,7 @@ function cost_over_time(ndx) {
         .height(500)  
         .margins({top: 10, right: 150, bottom: 30, left: 150})
         .dimension(cost_over_time_dim)  
+        .elasticY(true)
         .group(cost_over_time_group)  
         .transitionDuration(500)  
         .x(d3.time.scale().domain([minDate,maxDate]))
@@ -83,10 +84,10 @@ function cost_per_account(ndx) {
         .group(cost_per_account_group)
         .slicesCap(6)
         .legend(dc.legend()
-            .x(150)
-            .y(195)
+            .x(140)
+            .y(180)
             .itemHeight(13)
-            .gap(5)
+            .gap(9)
             .legendText(
                 function(d) {
                   /* console.log(d);för att se vilka nycklar (d.xx, d.något) som ska användas använd den här consolelog*/
@@ -114,15 +115,15 @@ function cost_per_type(ndx){
     
     
      dc.barChart('#Cost-Per-Type')
-            .width(1500)
-            .height(1000)
-            .margins({top: 10, left: 80, right: 1, bottom: 200})
+            .width(1700)
+            .height(700)
+            .margins({top: 10, left: 150, right: 150, bottom: 200})
             .dimension(cost_per_type_dimension)
             .group(filtered_cost_per_type_group)
             .transitionDuration(500)
             .renderLabel(true)/*gets total label for whole bar*/
             .elasticX(true)
-            .xAxisPadding(10)
+            .elasticY(true)
             .gap(15)
             .centerBar(true)
             .x(d3.scale.ordinal())

@@ -140,7 +140,7 @@
 /*below make sures that line grap renders as a line and not as an area*/ 
 .line {
          fill: none;
-         stroke: grey;
+         stroke: #004054;
          stroke-width: 6px;
          }
 
@@ -166,6 +166,33 @@
 #Cost-Per-Type > svg {
     display:block;
     margin:auto;
+}
+
+#index-background > div.container > div:nth-child(2) > section{
+    margin-top: 80px;
+}
+
+#cost-per-account > svg >.dc-legend{
+    font-family: "Nunito", Arial;
+    font-size: 16px;
+    text-transform: uppercase;
+    color:#004054;
+}
+
+#Cost-Over-Time > svg > g > g.axis.y{
+    font-family: "Nunito", Arial;
+    font-size: 16px;
+    color:#004054;
+}
+
+#Cost-Over-Time > svg > g > g.axis.x{
+    font-family: "Nunito", Arial;
+    font-size: 16px;
+    color:#004054;
+}
+
+#Cost-Over-Time > svg > g > g.axis.x > g > text{
+        transform: rotate(-35deg); 
 }
 
 
