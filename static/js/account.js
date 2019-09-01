@@ -97,7 +97,6 @@ function cost_per_account(ndx) {
         .renderLabel(false);
 }
 
-/*ska visa kostnad för varje löneart*/
 function cost_per_type(ndx){
     var cost_per_type_dimension = ndx.dimension(dc.pluck("Type"));
     var cost_per_type_group = cost_per_type_dimension.group().reduceSum(dc.pluck('Sum'));
@@ -128,12 +127,10 @@ function cost_per_type(ndx){
             .centerBar(true)
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
-            /*renderlet rotates labels on X axis*/
             .on('renderlet',function (chart) {
                     chart.selectAll("g.x text")
-                      .attr('dx', '-135')
-                     /* nedan kod kontolllerar lutningen på texten i x axeln och alignement av text och bar*/
-                      .attr('transform', "translate(25,0) rotate(-35)");
+                      .attr('dx', '-10')
+                      .attr('transform', "translate(10,0) rotate(-35)");
                 });
             
 }

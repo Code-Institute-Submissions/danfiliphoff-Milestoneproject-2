@@ -192,9 +192,22 @@
 }
 
 #Cost-Over-Time > svg > g > g.axis.x > g > text{
-        transform: rotate(-35deg); 
+    transform:rotate(-35deg); 
+    margin-top: 30px;
+    text-anchor: end !important;
 }
 
+#Cost-Per-Type > svg > g > g.axis.x > g > text{
+    text-anchor: end !important;
+}
+
+#Cost-Over-Time > svg{
+    overflow: visible;
+}
+
+#Cost-Over-Time > svg > g > g.axis.x > g:nth-child(2){
+    margin-top: 10px;    
+}
 
 /*--------------FOOTER-------------------*/
 .footer-pinned{
