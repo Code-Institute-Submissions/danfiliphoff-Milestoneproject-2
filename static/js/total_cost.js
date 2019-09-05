@@ -107,7 +107,7 @@ function TotalLineGraph(ndx) {
     var minDate = payment_date_dim.bottom(1)[0].PaymentDate;
     var maxDate = payment_date_dim.top(1)[0].PaymentDate;
   
-    dc.lineChart('#total-cost-line-graph')  
+    dc.lineChart('#total-cost-stacked-bar-chart')  
         .width(1000)  
         .height(300)  
         .margins({top: 10, right: 150, bottom: 30, left: 150})
@@ -135,9 +135,6 @@ function makePie(ndx) {
         .dimension(type_dim)
         .group(total_cost_pie_chart)
         .externalLabels(50)
-        /*8129071: har summerat ihopp för hand vill hitta kod som summerar ihopp åt mig. 
-        *100)/100 i slutet av formeln är för att få med 2 decimal tecken i procenten
-        */
         .label(function(d){return d.key + " " + d.value + " " + "KR (" +  Math.round((d.value/(8129071/100))*100)/100 + "%)"})
         .renderLabel(true);
 }
