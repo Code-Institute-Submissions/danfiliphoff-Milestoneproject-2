@@ -88,6 +88,11 @@
 
 
 /*--------GENERAL-------*/
+
+.navbar-fixed-bottom{
+    margin-left: 20px;
+    margin-right:24px;
+}
 #index-background{
     position: relative;
     background-repeat:no-repeat;
