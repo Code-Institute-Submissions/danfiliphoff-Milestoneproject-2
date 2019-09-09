@@ -221,9 +221,7 @@
     margin:auto;
 }
 
-#total-cost-pie-chart > svg > g > pie-slice-group >._1.selected > path{
-    color: #F88212;
-}
+
 /*--------------FOOTER-------------------*/
 
 

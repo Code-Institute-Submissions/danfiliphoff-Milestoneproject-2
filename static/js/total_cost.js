@@ -113,8 +113,13 @@ function makePie(ndx) {
         .transitionDuration(1500)
         .dimension(type_dim)
         .group(total_cost_pie_chart)
-        .label(function(d){return d.key + " " + d.value + " " + "KR (" +  Math.round((d.value/(8129071/100))*100)/100 + "%)"})
-        .renderLabel(true)
+        .legend(dc.legend()
+            .x(140)
+            .y(180)
+            .itemHeight(13)
+            .gap(9)
+            .legendText(function(d){return d.name + " " + d.data + " " + "KR (" +  Math.round((d.data/(8129071/100))*100)/100 + "%)"}))
+        .renderLabel(false)
         .ordinalColors(['#1f78b4', '#F88212', '#2EA122']);
 }
 
