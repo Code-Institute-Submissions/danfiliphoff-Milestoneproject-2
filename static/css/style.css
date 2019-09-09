@@ -211,6 +211,19 @@
     margin-top: 10px;    
 }
 
+#total-cost-stacked-bar-chart > svg {
+    display:block;
+    margin:auto;
+}
+
+#total-cost-pie-chart > svg {
+    display:block;
+    margin:auto;
+}
+
+#total-cost-pie-chart > svg > g > pie-slice-group >._1.selected > path{
+    color: #F88212;
+}
 /*--------------FOOTER-------------------*/
 
 

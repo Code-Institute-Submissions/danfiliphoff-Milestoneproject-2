@@ -18,7 +18,6 @@ function makeTotalCostGraps(error, totalCost){
     
    var ndx=crossfilter(totalCost);
    makePie(ndx);
-   TotalLineGraph(ndx);
    StackedBarChartTotalCost(ndx);
    dc.renderAll();
 }
@@ -54,7 +53,7 @@ function StackedBarChartTotalCost(ndx){
         });
    
     dc.barChart('#total-cost-stacked-bar-chart')
-            .width(1500)
+            .width(1300)
             .height(800)
             .margins({top: 10, left: 80, right: 1, bottom: 50})
             .dimension(payment_date_dim_bar)
@@ -69,7 +68,6 @@ function StackedBarChartTotalCost(ndx){
             .x(d3.time.scale().domain([minDate,maxDate]))
             .xUnits(d3.time.months)
            /* .barPadding(0.3)/*adjusts with of each bar*/
-            .legend(dc.legend().x(420).y(0).itemHeight(15).gap(5))
             .on('renderlet', function (chart) {
                 //Check if labels exist
                 var gLabels = chart.select(".labels");
@@ -100,25 +98,6 @@ function StackedBarChartTotalCost(ndx){
 }
 
 
-function TotalLineGraph(ndx) {  
-    var payment_date_dim = ndx.dimension(dc.pluck("PaymentDate"));  
-    var total_spend_per_date = payment_date_dim.group().reduceSum(dc.pluck('Sum'));
-    
-    var minDate = payment_date_dim.bottom(1)[0].PaymentDate;
-    var maxDate = payment_date_dim.top(1)[0].PaymentDate;
-  
-    dc.lineChart('#total-cost-stacked-bar-chart')  
-        .width(1000)  
-        .height(300)  
-        .margins({top: 10, right: 150, bottom: 30, left: 150})
-        .dimension(payment_date_dim)  
-        .group(total_spend_per_date)  
-        .transitionDuration(500)  
-        .x(d3.time.scale().domain([minDate,maxDate]))  
-        .xAxisLabel("Month")  
-        .yAxis().ticks(8);
-}  
-
 
 
 function makePie(ndx) {
@@ -127,15 +106,15 @@ function makePie(ndx) {
     
 
     dc.pieChart('#total-cost-pie-chart')
-          
+        .legend(dc.legend().x(400).y(10).itemHeight(13).gap(5))
         .height(1000)
         .radius(200)
         .innerRadius(100)
         .transitionDuration(1500)
         .dimension(type_dim)
         .group(total_cost_pie_chart)
-        .externalLabels(50)
         .label(function(d){return d.key + " " + d.value + " " + "KR (" +  Math.round((d.value/(8129071/100))*100)/100 + "%)"})
-        .renderLabel(true);
+        .renderLabel(true)
+        .ordinalColors(['#1f78b4', '#F88212', '#2EA122']);
 }
 
