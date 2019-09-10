@@ -239,18 +239,13 @@
 /*-------------MEDIA QUERYS-----------*/
 @media (max-width: 404px){
     .mainbutton{
-        height: 118px;
-        width: 118px;
-        margin-left: 29px;
+        height: 85px;
+        width: 85px;
+        font-size: 11px;
     }
 }
 
 
-@media (max-width: 768px){
-    .mainbutton{
-        margin-top: 5px;
-    }
-}
 
 @media (min-width: 768px){
     
@@ -263,6 +258,9 @@
     margin-top: -31px;
     }
     
+   .navbar-fixed-bottom {
+    margin-bottom: -25px;
+    }
     
 }
 
@@ -300,7 +298,6 @@
 
 @media (max-width: 320px){
    .topic-text{
-        margin-left: 54px;
         font-size: 12px;
     }
 }

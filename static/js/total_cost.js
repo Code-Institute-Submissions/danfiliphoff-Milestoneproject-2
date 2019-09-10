@@ -89,9 +89,9 @@ function StackedBarChartTotalCost(ndx){
                 .attr('x', function(d){ 
                     return +d.getAttribute('x') + (d.getAttribute('width')/2); 
                 })
-                .attr('y', function(d){ return +d.getAttribute('y') + 15; })
+                .attr('y', function(d){ return +d.getAttribute('y') + 15; });
                 .attr('style', function(d){
-                    if (+d.getAttribute('height') < 18) return "display:none";
+                    if (+d.getAttribute('height') < 100) return "display:none";
                 });
             
             });
