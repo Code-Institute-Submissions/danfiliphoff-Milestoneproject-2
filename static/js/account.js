@@ -27,12 +27,22 @@ function makeAccountDataGraphs(error, account){
     
     
    var ndx=crossfilter(account);
+   salary_type_selector(ndx);
    cost_per_account(ndx);
    cost_per_type(ndx);
    cost_over_time(ndx);
    dc.renderAll();
 }
 
+
+function salary_type_selector(ndx){
+    var salary_type_selector_dim = ndx.dimension(dc.pluck('Type'));
+    var salary_type_selector_group = salary_type_selector_dim.group();
+    
+    dc.selectMenu("#salary-type-selector")
+        .dimension(salary_type_selector_dim)
+        .group(salary_type_selector_group);
+}
 
 function cost_over_time(ndx) {
     var cost_over_time_dim = ndx.dimension(dc.pluck("PaymentDate"));  

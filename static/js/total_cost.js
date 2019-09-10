@@ -22,7 +22,8 @@ function makeTotalCostGraps(error, totalCost){
    dc.renderAll();
 }
     
-    
+
+
 function StackedBarChartTotalCost(ndx){
     var payment_date_dim_bar = ndx.dimension(dc.pluck("PaymentDate"));
     var minDate = payment_date_dim_bar.bottom(1)[0].PaymentDate;
