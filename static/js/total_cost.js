@@ -79,7 +79,7 @@ function StackedBarChartTotalCost(ndx){
                 gLabelsData.enter().append("text"); //Add new elements
                 gLabelsData
                 .attr('text-anchor', 'middle')
-                .attr('fill', 'white')
+                .attr('fill', 'black')
                 .text(function(d){
                     text_object =  d3.select(d).datum().y
                     console.log(text_object)
