@@ -221,6 +221,16 @@
     margin:auto;
 }
 
+#total-cost-pie-chart > svg {
+    display:block;
+    margin:auto;
+    margin-top:-260px;
+    margin-bottom: -260px;
+}
+
+
+
+
 
 /*--------------FOOTER-------------------*/
 
