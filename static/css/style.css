@@ -133,7 +133,7 @@
     text-align: center;
 }
 
-/*--------------GRAPHS AND CHARTS-------------------*/
+/*--------------GRAPHS AND CHARTS -------------------*/
 
 /*below hides y axis for accounts bar graph*/
 #Cost-Per-Type
@@ -160,9 +160,27 @@
 #Cost-Over-Time > svg,
 #cost-per-account > svg,
 #total-cost-pie-chart > svg,
-#total-cost-stacked-bar-chart > svg{
+#total-cost-stacked-bar-chart > svg,
+#salary-type-selector > select{
     display:block;
     margin:auto;
+}
+
+#salary-type-selector > select{
+    font-family: "Nunito", Arial;
+    font-size: 16px;
+    background-color: inherit;
+    height: 30px;
+    width: 130px;
+    font-family: "Nunito", Arial;
+    font-weight: 800;
+    font-size:16px;
+    border: 3px solid #00516b;
+    text-align: center;
+}
+
+#salary-type-selector > select,button, input, select, textarea{
+    background-color: red;
 }
 
 #index-background > div.container > div:nth-child(2) > section{
@@ -179,7 +197,8 @@
 #Cost-Over-Time > svg > g > g.axis.y,
 #Cost-Over-Time > svg > g > g.axis.x,
 #total-cost-stacked-bar-chart > svg > g > g.axis.y,
-#total-cost-stacked-bar-chart > svg > g > g.axis.x{
+#total-cost-stacked-bar-chart > svg > g > g.axis.x,
+#salary-type-selector > select,button, input, select, textarea{
     font-family: "Nunito", Arial;
     font-size: 16px;
     color:#004054;

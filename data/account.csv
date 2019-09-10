@@ -59,9 +59,9 @@
 "111","2019-05-25",827,"Wellness Benefit",5673,1,400
 "112","2019-03-25",827,"Wellness Benefit",5673,800,800
 "113","2019-01-25",827,"Wellness Benefit",5673,1,0
-"115","2019-02-25",482,"Probationary Sick Leave Deduction-Salary",5047,20,-2306
-"116","2019-05-25",492,"Probationary Sick Leave Deduction-Hourly",5047,7,-649
-"117","2019-02-25",492,"Probationary Sick Leave Deduction-Hourly",5047,2,-214
+"115","2019-02-25",482,"Probationary Sick Leave-Salary",5047,20,-2306
+"116","2019-05-25",492,"Probationary Sick Leave-Hourly",5047,7,-649
+"117","2019-02-25",492,"Probationary Sick Leave-Hourly",5047,2,-214
 "118","2019-03-25",222,"Extra Free Hours Earned-Payout",5055,0,9783
 "119","2018-08-25",222,"Extra Free Hours Earned-Payout",5055,0,3385
 "120","2018-07-25",222,"Extra Free Hours Earned-Payout",5055,1,4834
