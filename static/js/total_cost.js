@@ -23,7 +23,6 @@ function makeTotalCostGraps(error, totalCost){
 }
     
     
-/*skapar graf och hämtar data*/
 function StackedBarChartTotalCost(ndx){
     var payment_date_dim_bar = ndx.dimension(dc.pluck("PaymentDate"));
     var minDate = payment_date_dim_bar.bottom(1)[0].PaymentDate;
@@ -53,7 +52,7 @@ function StackedBarChartTotalCost(ndx){
         });
    
     dc.barChart('#total-cost-stacked-bar-chart')
-            .width(1300)
+            .width(1500)
             .height(800)
             .margins({top: 10, left: 80, right: 1, bottom: 50})
             .dimension(payment_date_dim_bar)
@@ -77,7 +76,7 @@ function StackedBarChartTotalCost(ndx){
             
                 var gLabelsData = gLabels.selectAll("text").data(chart.selectAll(".bar")[0]);
                 gLabelsData.exit().remove(); //Remove unused elements
-                gLabelsData.enter().append("text") //Add new elements
+                gLabelsData.enter().append("text"); //Add new elements
                 gLabelsData
                 .attr('text-anchor', 'middle')
                 .attr('fill', 'white')
@@ -89,9 +88,9 @@ function StackedBarChartTotalCost(ndx){
                 .attr('x', function(d){ 
                     return +d.getAttribute('x') + (d.getAttribute('width')/2); 
                 })
-                .attr('y', function(d){ return +d.getAttribute('y') + 15; });
+                .attr('y', function(d){ return +d.getAttribute('y') + 15; })
                 .attr('style', function(d){
-                    if (+d.getAttribute('height') < 100) return "display:none";
+                    if (+d.getAttribute('height') < 18) return "display:none";
                 });
             
             });
