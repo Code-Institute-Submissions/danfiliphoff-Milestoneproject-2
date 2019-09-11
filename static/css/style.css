@@ -33,6 +33,7 @@
     max-width: 100px;
 }
 
+/*--------Navigation buttons-------*/
 #center-btn{
     margin-right: 20px;
 }
@@ -83,8 +84,6 @@
   opacity: 1;
   right: 0;
 }
-
-
 
 
 /*--------GENERAL-------*/
@@ -165,11 +164,14 @@
     margin-top:10px!important;
 }
 
-
-
 .btn-default{
     padding-top:1px!important;
 }
+
+#salary-type-selector > select > option:nth-child(1){
+    text-transform: uppercase;
+}
+
 /*--------------GRAPHS AND CHARTS GENERAL  -------------------*/
 /*below make sures that line grap renders as a line and not as an area*/ 
 .line {
@@ -244,7 +246,6 @@
 
 /*--------------FOOTER-------------------*/
 
-
 .footerbackgrund{
   bottom: 0;
   margin-top: 50px;
@@ -268,8 +269,6 @@
     .topic-header{
         font-size:  25px;
     }
-    
-   
 }
 
 @media (max-width: 320px){
@@ -315,5 +314,4 @@
    .navbar-fixed-bottom {
     margin-bottom: -25px;
     }
-    
 }

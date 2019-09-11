@@ -1,9 +1,3 @@
-/*steg: 
-1. skapa HTML.
-2. skapa function
-3.lägg till function under make graph*/
-
-/*väntar med att skapa graf tills data är laddat*/
 queue()
     .defer(d3.csv, "data/total_cost.csv")
     .await(makeTotalCostGraps);
