@@ -135,7 +135,9 @@
 
 /*--------------SELECTORS AND DROPDOWNS -------------------*/
 #salary-type-selector > select,
-#index-background > div > div.container > div:nth-child(2) > div > button{
+#index-background > div > div.container > div:nth-child(2) > div > button,
+#index-background > div > div.row > div > button
+{
     font-family: "Nunito", Arial;
     font-size: 16px;
     background-color: inherit;
@@ -147,24 +149,27 @@
 }
 
 #salary-type-selector > select,button, input, select, textarea,
-#index-background > div > div.container > div:nth-child(2) > div > button{
+#index-background > div > div.container > div:nth-child(2) > div > button,
+#index-background > div > div.row > div > button{
     background-color: #D3F8FF;
     border-radius: 25%;
     text-align: center;
 }
 
-#index-background > div > div.container > div:nth-child(2) > div > button > a{
+#index-background > div > div.container > div:nth-child(2) > div > button > a,
+#index-background > div > div.row > div > button > a{
     text-transform: uppercase;
 }
 
-#index-background > div.container > div:nth-child(2) > section{
-    margin-top: 80px;
+#index-background > div > div.container > div:nth-child(2) > div > button{
+    margin-top:10px!important;
 }
+
+
 
 .btn-default{
     padding-top:1px!important;
 }
-
 /*--------------GRAPHS AND CHARTS GENERAL  -------------------*/
 /*below make sures that line grap renders as a line and not as an area*/ 
 .line {
@@ -179,7 +184,8 @@
 #total-cost-pie-chart > svg,
 #total-cost-stacked-bar-chart > svg,
 #salary-type-selector > select,
-#index-background > div > div.container > div:nth-child(2) > div > button{
+#index-background > div > div.container > div:nth-child(2) > div > button,
+#index-background > div > div.row > div > button{
     display:block;
     margin:auto;
 }
@@ -191,7 +197,8 @@
 #total-cost-stacked-bar-chart > svg > g > g.axis.x,
 #salary-type-selector > select,button, input, select, textarea,
 #salary-type-selector > select > option,
-#index-background > div > div.container > div:nth-child(2) > div > button > a{
+#index-background > div > div.container > div:nth-child(2) > div > button > a,
+#index-background > div > div.row > div > button > a{
     font-family: "Nunito", Arial;
     font-size: 16px;
     color:#004054;
