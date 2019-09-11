@@ -133,93 +133,91 @@
     text-align: center;
 }
 
-/*--------------GRAPHS AND CHARTS -------------------*/
+/*--------------SELECTORS AND DROPDOWNS -------------------*/
+#salary-type-selector > select,
+#index-background > div > div.container > div:nth-child(2) > div > button{
+    font-family: "Nunito", Arial;
+    font-size: 16px;
+    background-color: inherit;
+    height: 30px;
+    width: 130px;
+    font-weight: 800;
+    border: 3px solid #00516b;
+    text-align: center;
+}
 
-/*below hides y axis for accounts bar graph*/
-#Cost-Per-Type
- .axis.y { display: none; }
+#salary-type-selector > select,button, input, select, textarea,
+#index-background > div > div.container > div:nth-child(2) > div > button{
+    background-color: #D3F8FF;
+    border-radius: 25%;
+    text-align: center;
+}
 
+#index-background > div > div.container > div:nth-child(2) > div > button > a{
+    text-transform: uppercase;
+}
+
+#index-background > div.container > div:nth-child(2) > section{
+    margin-top: 80px;
+}
+
+.btn-default{
+    padding-top:1px!important;
+}
+
+/*--------------GRAPHS AND CHARTS GENERAL  -------------------*/
 /*below make sures that line grap renders as a line and not as an area*/ 
 .line {
          fill: none;
          stroke: #004054;
          stroke-width: 6px;
          }
-
-
-#Cost-Over-Time > svg > g > g.axis.x {
-    font-size: 13.5px;
-}
-
-/*#Cost-Over-Time > svg > g > g.axis.x > g:nth-child(5){
-    font-size: 10px;
-}*/
-
-
+         
 #Cost-Per-Type > svg,
 #Cost-Over-Time > svg,
 #cost-per-account > svg,
 #total-cost-pie-chart > svg,
 #total-cost-stacked-bar-chart > svg,
-#salary-type-selector > select{
+#salary-type-selector > select,
+#index-background > div > div.container > div:nth-child(2) > div > button{
     display:block;
     margin:auto;
 }
 
-#salary-type-selector > select{
-    font-family: "Nunito", Arial;
-    font-size: 16px;
-    background-color: inherit;
-    height: 30px;
-    width: 130px;
-    font-family: "Nunito", Arial;
-    font-weight: 800;
-    font-size:16px;
-    border: 3px solid #00516b;
-    text-align: center;
-}
-
-#salary-type-selector > select,button, input, select, textarea{
-    background-color: #D3F8FF;
-    border-radius: 25%;
-    text-align: center;
-}
-
-#cost-per-account > svg > g:nth-child(1){
-    max-width: 50px !important;
-}
-
-
-
-#index-background > div.container > div:nth-child(2) > section{
-    margin-top: 80px;
-}
-
-#cost-per-account > svg >.dc-legend{
-    font-family: "Nunito", Arial;
-    font-size: 16px;
-    text-transform: uppercase;
-    color:#004054;
-}
-
 #Cost-Over-Time > svg > g > g.axis.y,
 #Cost-Over-Time > svg > g > g.axis.x,
+#cost-per-account > svg >.dc-legend,
 #total-cost-stacked-bar-chart > svg > g > g.axis.y,
 #total-cost-stacked-bar-chart > svg > g > g.axis.x,
 #salary-type-selector > select,button, input, select, textarea,
-#salary-type-selector > select > option{
+#salary-type-selector > select > option,
+#index-background > div > div.container > div:nth-child(2) > div > button > a{
     font-family: "Nunito", Arial;
     font-size: 16px;
     color:#004054;
+}
+
+/*--------------GRAPHS AND CHARTS SPECIFIC-------------------*/         
+         
+#Cost-Per-Type
+ .axis.y { display: none; 
+ }
+ 
+#Cost-Per-Type > svg > g > g.axis.x > g > text{
+    text-anchor: end !important;
+}
+
+#cost-per-account > svg >.dc-legend{
+    text-transform: uppercase;
+}
+
+#Cost-Over-Time > svg > g > g.axis.x {
+    font-size: 13.5px;
 }
 
 #Cost-Over-Time > svg > g > g.axis.x > g > text{
     transform:rotate(-35deg); 
     margin-top: 30px;
-    text-anchor: end !important;
-}
-
-#Cost-Per-Type > svg > g > g.axis.x > g > text{
     text-anchor: end !important;
 }
 
@@ -230,7 +228,6 @@
 #Cost-Over-Time > svg > g > g.axis.x > g:nth-child(2){
     margin-top: 10px;    
 }
-
 
 #total-cost-pie-chart > svg {
     margin-top:-260px;
@@ -253,6 +250,28 @@
 
 
 /*-------------MEDIA QUERYS-----------*/
+@media  (min-width: 0px) and (max-width: 426px){
+    .title{
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 40px;
+        padding-top: 20px;
+    }
+    
+    .topic-header{
+        font-size:  25px;
+    }
+    
+   
+}
+
+@media (max-width: 320px){
+   .topic-text{
+        font-size: 12px;
+    }
+}
+
+
 @media (max-width: 404px){
     .mainbutton{
         height: 85px;
@@ -261,6 +280,18 @@
     }
 }
 
+@media  (min-width: 427px) and (max-width: 768px) {
+    .title {
+        font-weight: 800;
+        font-size: 35px;
+        line-height: 30px;
+        padding-top: 20px;
+    }
+    
+    .topic-header{
+        font-size:  30px;
+    }
+}
 
 
 @media (min-width: 768px){
@@ -280,40 +311,10 @@
     
 }
 
-@media  (min-width: 427px) and (max-width: 768px) {
-    .title {
-        font-weight: 800;
-        font-size: 35px;
-        line-height: 30px;
-        padding-top: 20px;
-    }
-    
-    .topic-header{
-        font-size:  30px;
-    }
-}
+
 
 
 
     
-@media  (min-width: 0px) and (max-width: 426px){
-    .title{
-        font-weight: 800;
-        font-size: 24px;
-        line-height: 40px;
-        padding-top: 20px;
-    }
-    
-    .topic-header{
-        font-size:  25px;
-    }
-    
-   
-}
 
 
-@media (max-width: 320px){
-   .topic-text{
-        font-size: 12px;
-    }
-}
