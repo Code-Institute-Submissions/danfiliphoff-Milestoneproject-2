@@ -180,8 +180,13 @@
 }
 
 #salary-type-selector > select,button, input, select, textarea{
-    background-color: red;
+    background-color: #D3F8FF;
+    border-radius: 25%;
+    text-align: center;
 }
+
+
+
 
 #index-background > div.container > div:nth-child(2) > section{
     margin-top: 80px;
@@ -198,7 +203,8 @@
 #Cost-Over-Time > svg > g > g.axis.x,
 #total-cost-stacked-bar-chart > svg > g > g.axis.y,
 #total-cost-stacked-bar-chart > svg > g > g.axis.x,
-#salary-type-selector > select,button, input, select, textarea{
+#salary-type-selector > select,button, input, select, textarea,
+#salary-type-selector > select > option{
     font-family: "Nunito", Arial;
     font-size: 16px;
     color:#004054;
