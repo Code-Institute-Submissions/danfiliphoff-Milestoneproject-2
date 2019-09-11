@@ -185,6 +185,9 @@
     text-align: center;
 }
 
+#cost-per-account > svg > g:nth-child(1){
+    max-width: 50px !important;
+}
 
 
 
