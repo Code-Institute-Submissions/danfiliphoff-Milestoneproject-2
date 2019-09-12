@@ -49,6 +49,7 @@ function StackedBarChartTotalCost(ndx){
     dc.barChart('#total-cost-stacked-bar-chart')
             .width(1500)
             .height(800)
+            .useViewBoxResizing(true)
             .margins({top: 10, left: 80, right: 1, bottom: 50})
             .dimension(payment_date_dim_bar)
             .group(NettpayByMonth, "Nettpay")
