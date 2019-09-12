@@ -106,12 +106,13 @@
     height: 100%;
 }
 
-.topic-header{
+.h2-chart-heading{
   font-family: "Nunito", Arial;
   font-weight: 700;
   font-size:  43px;
   color:#004054;
   text-align: center;
+  margin-top: 30px;
 }
 
 .topic-text{
@@ -238,11 +239,6 @@
     margin-top: 10px;    
 }
 
-#total-cost-pie-chart > svg {
-    margin-top:-260px;
-    margin-bottom: -260px;
-}
-
 
 /*--------------FOOTER-------------------*/
 
@@ -266,7 +262,7 @@
         padding-top: 20px;
     }
     
-    .topic-header{
+    .h2-chart-heading{
         font-size:  25px;
     }
 }
@@ -294,7 +290,7 @@
         padding-top: 20px;
     }
     
-    .topic-header{
+    .h2-chart-heading{
         font-size:  30px;
     }
 }
