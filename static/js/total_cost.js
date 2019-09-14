@@ -9,15 +9,12 @@ function makeTotalCostGraps(error, totalCost){
             d.PaymentDate = parseDate(d.PaymentDate);
         });
 
-    
    var ndx=crossfilter(totalCost);
    makePie(ndx);
    StackedBarChartTotalCost(ndx);
    dc.renderAll();
 }
     
-
-
 function StackedBarChartTotalCost(ndx){
     var payment_date_dim_bar = ndx.dimension(dc.pluck("PaymentDate"));
     var minDate = payment_date_dim_bar.bottom(1)[0].PaymentDate;
@@ -55,21 +52,19 @@ function StackedBarChartTotalCost(ndx){
             .group(NettpayByMonth, "Nettpay")
             .stack(TaxesByMonth, "Taxes")
             .stack(SocialSecurityFeesByMonth, "Sociala")
-            .renderLabel(true)/*gets total label for whole bar*/
+            .renderLabel(true)
             .elasticX(true)
             .xAxisPadding(10)
             .gap(15)
             .centerBar(true)
             .x(d3.time.scale().domain([minDate,maxDate]))
             .xUnits(d3.time.months)
-           /* .barPadding(0.3)/*adjusts with of each bar*/
             .on('renderlet', function (chart) {
                 //Check if labels exist
                 var gLabels = chart.select(".labels");
                 if (gLabels.empty()){
                     gLabels = chart.select(".chart-body").append('g').classed('labels', true);
                 }
-            
                 var gLabelsData = gLabels.selectAll("text").data(chart.selectAll(".bar")[0]);
                 gLabelsData.exit().remove(); //Remove unused elements
                 gLabelsData.enter().append("text"); //Add new elements
@@ -92,14 +87,10 @@ function StackedBarChartTotalCost(ndx){
             });
 }
 
-
-
-
 function makePie(ndx) {
     var type_dim = ndx.dimension(dc.pluck("Type"));
     var total_cost_pie_chart = type_dim.group().reduceSum(dc.pluck('Sum'));
     
-
     dc.pieChart('#total-cost-pie-chart')
         .height(270)
         .width(500)
@@ -118,4 +109,3 @@ function makePie(ndx) {
         .renderLabel(false)
         .ordinalColors(['#1f78b4', '#F88212', '#2EA122']);
 }
-

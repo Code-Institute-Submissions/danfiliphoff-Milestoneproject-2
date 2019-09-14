@@ -1,14 +1,7 @@
-/*steg: 
-1. skapa HTML.
-2. skapa function
-3.lägg till function under make graph*/
-
-/*väntar med att skapa graf tills data är laddat*/
 queue()
     .defer(d3.csv, "data/account.csv")
     .await(makeAccountDataGraphs);
     
-
 function makeAccountDataGraphs(error, account){
     
     var parseDate = d3.time.format("%Y-%m-%d").parse;
@@ -25,7 +18,6 @@ function makeAccountDataGraphs(error, account){
         d.Sum = parseInt(d.Sum, 10);
     });
     
-    
    var ndx=crossfilter(account);
    salary_type_selector(ndx);
    cost_per_account(ndx);
@@ -33,7 +25,6 @@ function makeAccountDataGraphs(error, account){
    cost_over_time(ndx);
    dc.renderAll();
 }
-
 
 function salary_type_selector(ndx){
     var salary_type_selector_dim = ndx.dimension(dc.pluck('Type'));
@@ -64,26 +55,9 @@ function cost_over_time(ndx) {
         .yAxis().ticks(15);
         }
 
-
-
-
 function cost_per_account(ndx) {
     var cost_per_account_dim = ndx.dimension(dc.pluck("Account"));
     var cost_per_account_group = cost_per_account_dim.group().reduceSum(dc.pluck('Sum'));
- 
-    /*räknar ihopp totalen men funkar ej
-   var total= cost_per_account_dim.groupAll().reduceSum(function (d) {
-       return +d.Sum;
-   });
-   console.log(total);
-   
-    dc.numberDisplay("#total")
-        .valueAccessor(function(d){
-            console.log(d);
-            return +d.Sum})
-        .group(total);*/
-
-         
 
     dc.pieChart('#cost-per-account')
         .height(500)
@@ -102,7 +76,6 @@ function cost_per_account(ndx) {
             .gap(9)
             .legendText(
                 function(d) {
-                  /* console.log(d);för att se vilka nycklar (d.xx, d.något) som ska användas använd den här consolelog*/
                     return d.name + " - " + d.data + " " + "KR (" 
             +  Math.round((d.data/(10241617/100))*100)/100 + "%)"})
             )
@@ -124,7 +97,6 @@ function cost_per_type(ndx){
            };
           }
     
-    
      dc.barChart('#Cost-Per-Type')
             .width(1700)
             .height(700)
@@ -145,6 +117,4 @@ function cost_per_type(ndx){
                       .attr('dx', '-10')
                       .attr('transform', "translate(10,0) rotate(-35)");
                 });
-            
 }
-
