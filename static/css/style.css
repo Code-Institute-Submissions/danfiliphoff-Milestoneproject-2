@@ -85,6 +85,10 @@
   right: 0;
 }
 
+.navigation-link-inline{
+    display: inline;
+}
+
 
 /*--------GENERAL-------*/
 
