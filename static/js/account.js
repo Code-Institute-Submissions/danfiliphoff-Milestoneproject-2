@@ -105,7 +105,7 @@ function cost_per_type(ndx){
             .dimension(cost_per_type_dimension)
             .group(filtered_cost_per_type_group)
             .transitionDuration(500)
-            .renderLabel(true)/*gets total label for whole bar*/
+            .renderLabel(true)
             .elasticX(true)
             .elasticY(true)
             .gap(15)

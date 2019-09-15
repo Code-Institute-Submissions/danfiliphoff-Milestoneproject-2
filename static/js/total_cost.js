@@ -59,6 +59,7 @@ function StackedBarChartTotalCost(ndx){
             .centerBar(true)
             .x(d3.time.scale().domain([minDate,maxDate]))
             .xUnits(d3.time.months)
+            .y(d3.scale.linear().domain([0, 850000]))
             .on('renderlet', function (chart) {
                 //Check if labels exist
                 var gLabels = chart.select(".labels");
