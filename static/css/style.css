@@ -188,7 +188,6 @@
 #Cost-Per-Type > svg,
 #Cost-Over-Time > svg,
 #cost-per-account > svg,
-#total-cost-pie-chart > svg,
 #total-cost-stacked-bar-chart > svg,
 #salary-type-selector > select,
 #index-background > div > div.container > div:nth-child(2) > div > button,
@@ -212,7 +211,6 @@
 }
 
 /*--------------GRAPHS AND CHARTS SPECIFIC-------------------*/         
-         
 #Cost-Per-Type
  .axis.y { display: none; 
  }
