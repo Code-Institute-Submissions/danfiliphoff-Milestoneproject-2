@@ -17,14 +17,15 @@
 }
 
 /*--------Index-------*/
-#index-body-size{
+.index-body-size{
     position: fixed;
     height: 100%;
     width: 100%;
     margin-top: -27px;
     margin-left: 0px;
 }
-#indexcontent{
+
+.indexcontent{
     text-align: center;
     margin-top: 1%;
 }
@@ -44,7 +45,7 @@
 }
 
 /*--------Navigation buttons-------*/
-#center-btn{
+.center-btn{
     margin-right: 20px;
 }
 
@@ -106,7 +107,8 @@
     margin-left: 20px;
     margin-right:24px;
 }
-#index-background{
+
+.index-background{
     position: relative;
     background-repeat:no-repeat;
     background-size:cover;
@@ -319,7 +321,7 @@
         max-width: 295px;
     }
 
-    #index-body-size{
+    .index-body-size{
     margin-top: -31px;
     }
 
