@@ -29,13 +29,14 @@
     margin-top: 1%;
 }
 
-.topic-header{
+.welcome-header{
     text-align: center;
     margin-bottom: 15px;
     font-family: "Nunito", Arial;
     font-size: 30px;
     text-transform: uppercase;
     color:#004054;
+    margin-bottom: 20px;
 }
 
 #welcome-text{
@@ -128,7 +129,7 @@
   margin-top: 30px;
 }
 
-.topic-text{
+.welcome-text{
   font-family: "Nunito", Arial;
   color:black;
   font-size: 13px;
@@ -273,13 +274,17 @@
         padding-top: 20px;
     }
 
+    .welcome-header{
+        font-size: 20px;
+    }
+
     .h2-chart-heading{
         font-size:  25px;
     }
 }
 
 @media (max-width: 320px){
-   .topic-text{
+   .welcome-text{
         font-size: 12px;
     }
 }
@@ -309,7 +314,7 @@
 
 @media (min-width: 768px){
 
-    .topic-text{
+    .welcome-text{
         font-size: 15px;
         max-width: 295px;
     }
