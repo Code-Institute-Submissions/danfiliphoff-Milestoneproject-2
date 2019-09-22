@@ -156,7 +156,7 @@
 }
 
 /*--------------SELECTORS AND DROPDOWNS -------------------*/
-#salary-type-selector > select,
+.salary-type-selector > select,
 #index-background > div > div.container > div:nth-child(2) > div > button,
 #index-background > div > div.row > div > button
 {
@@ -170,7 +170,7 @@
     text-align: center;
 }
 
-#salary-type-selector > select,button, input, select, textarea,
+.salary-type-selector > select,button, input, select, textarea,
 #index-background > div > div.container > div:nth-child(2) > div > button,
 #index-background > div > div.row > div > button{
     background-color: #D3F8FF;
@@ -191,7 +191,7 @@
     padding-top:1px!important;
 }
 
-#salary-type-selector > select > option:nth-child(1){
+.salary-type-selector > select > option:nth-child(1){
     text-transform: uppercase;
 }
 
@@ -207,7 +207,7 @@
 #Cost-Over-Time > svg,
 #cost-per-account > svg,
 #total-cost-stacked-bar-chart > svg,
-#salary-type-selector > select,
+.salary-type-selector > select,
 #index-background > div > div.container > div:nth-child(2) > div > button,
 #index-background > div > div.row > div > button{
     display:block;
@@ -219,8 +219,8 @@
 #cost-per-account > svg >.dc-legend,
 #total-cost-stacked-bar-chart > svg > g > g.axis.y,
 #total-cost-stacked-bar-chart > svg > g > g.axis.x,
-#salary-type-selector > select,button, input, select, textarea,
-#salary-type-selector > select > option,
+.salary-type-selector > select,button, input, select, textarea,
+.salary-type-selector > select > option,
 #index-background > div > div.container > div:nth-child(2) > div > button > a,
 #index-background > div > div.row > div > button > a{
     font-family: "Nunito", Arial;
