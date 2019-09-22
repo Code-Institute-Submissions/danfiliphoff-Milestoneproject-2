@@ -1,7 +1,14 @@
+/**
+Loads data from CSV file and calls the function makeTotalCostGraps
+once the CSV is loaded.
+*/
 queue()
     .defer(d3.csv, "data/total_cost.csv")
     .await(makeTotalCostGraps);
 
+/**
+Parses dates and then calls the graph functions and renders them.
+*/
 function makeTotalCostGraps(error, totalCost){
 
     var parseDate = d3.time.format("%Y-%m-%d").parse;
@@ -15,6 +22,35 @@ function makeTotalCostGraps(error, totalCost){
    dc.renderAll();
 }
 
+/**
+Function for Pie chart.
+ */
+function makePie(ndx) {
+    var type_dim = ndx.dimension(dc.pluck("Type"));
+    var total_cost_pie_chart = type_dim.group().reduceSum(dc.pluck('Sum'));
+
+    dc.pieChart('.total-cost-pie-chart')
+        .height(350)
+        .width(500)
+        .radius(210)
+        .useViewBoxResizing(true)
+        .innerRadius(150)
+        .transitionDuration(1500)
+        .dimension(type_dim)
+        .group(total_cost_pie_chart)
+        .legend(dc.legend()
+            .x(107)
+            .y(150)
+            .itemHeight(13)
+            .gap(9)
+            .legendText(function(d){return d.name + " " + d.data + " " + "KR (" +  Math.round((d.data/(8129071/100))*100)/100 + "%)"}))
+        .renderLabel(false)
+        .ordinalColors(['#1f78b4', '#F88212', '#2EA122']);
+}
+
+/**
+Function for stacked bar chart.
+ */
 function StackedBarChartTotalCost(ndx){
     var payment_date_dim_bar = ndx.dimension(dc.pluck("PaymentDate"));
     var minDate = payment_date_dim_bar.bottom(1)[0].PaymentDate;
@@ -86,27 +122,4 @@ function StackedBarChartTotalCost(ndx){
                 });
 
             });
-}
-
-function makePie(ndx) {
-    var type_dim = ndx.dimension(dc.pluck("Type"));
-    var total_cost_pie_chart = type_dim.group().reduceSum(dc.pluck('Sum'));
-
-    dc.pieChart('.total-cost-pie-chart')
-        .height(350)
-        .width(500)
-        .radius(210)
-        .useViewBoxResizing(true)
-        .innerRadius(150)
-        .transitionDuration(1500)
-        .dimension(type_dim)
-        .group(total_cost_pie_chart)
-        .legend(dc.legend()
-            .x(107)
-            .y(150)
-            .itemHeight(13)
-            .gap(9)
-            .legendText(function(d){return d.name + " " + d.data + " " + "KR (" +  Math.round((d.data/(8129071/100))*100)/100 + "%)"}))
-        .renderLabel(false)
-        .ordinalColors(['#1f78b4', '#F88212', '#2EA122']);
 }
