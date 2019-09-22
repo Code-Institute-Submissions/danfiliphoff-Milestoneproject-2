@@ -195,7 +195,6 @@
 }
 
 /*--------------GRAPHS AND CHARTS GENERAL  -------------------*/
-/*below make sures that line grap renders as a line and not as an area*/
 .line {
          fill: none;
          stroke: #004054;
@@ -248,10 +247,6 @@
     transform:rotate(-35deg);
     margin-top: 30px;
     text-anchor: end !important;
-}
-
-.Cost-Over-Time > svg{
-    overflow: visible;
 }
 
 .Cost-Over-Time > svg > g > g.axis.x > g:nth-child(2){

@@ -97,20 +97,18 @@ function StackedBarChartTotalCost(ndx){
             .xUnits(d3.time.months)
             .y(d3.scale.linear().domain([0, 850000]))
             .on('renderlet', function (chart) {
-                //Check if labels exist
                 var gLabels = chart.select(".labels");
                 if (gLabels.empty()){
                     gLabels = chart.select(".chart-body").append('g').classed('labels', true);
                 }
                 var gLabelsData = gLabels.selectAll("text").data(chart.selectAll(".bar")[0]);
-                gLabelsData.exit().remove(); //Remove unused elements
-                gLabelsData.enter().append("text"); //Add new elements
+                gLabelsData.exit().remove();
+                gLabelsData.enter().append("text");
                 gLabelsData
                 .attr('text-anchor', 'middle')
                 .attr('fill', 'black')
                 .text(function(d){
                     text_object =  d3.select(d).datum().y
-                    console.log(text_object)
                     return text_object
                 })
                 .attr('x', function(d){
