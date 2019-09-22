@@ -1,9 +1,9 @@
 queue()
     .defer(d3.csv, "data/total_cost.csv")
     .await(makeTotalCostGraps);
-    
+
 function makeTotalCostGraps(error, totalCost){
-    
+
     var parseDate = d3.time.format("%Y-%m-%d").parse;
         totalCost.forEach(function(d){
             d.PaymentDate = parseDate(d.PaymentDate);
@@ -14,7 +14,7 @@ function makeTotalCostGraps(error, totalCost){
    StackedBarChartTotalCost(ndx);
    dc.renderAll();
 }
-    
+
 function StackedBarChartTotalCost(ndx){
     var payment_date_dim_bar = ndx.dimension(dc.pluck("PaymentDate"));
     var minDate = payment_date_dim_bar.bottom(1)[0].PaymentDate;
@@ -26,7 +26,7 @@ function StackedBarChartTotalCost(ndx){
                 return 0;
             }
         });
-    
+
     var TaxesByMonth = payment_date_dim_bar.group().reduceSum(function (d) {
             if (d.Type === 'Taxes') {
                 return +d.Sum;
@@ -34,7 +34,7 @@ function StackedBarChartTotalCost(ndx){
                 return 0;
             }
         });
-        
+
     var SocialSecurityFeesByMonth = payment_date_dim_bar.group().reduceSum(function (d) {
             if (d.Type === 'Social Security Fees') {
                 return +d.Sum;
@@ -42,8 +42,8 @@ function StackedBarChartTotalCost(ndx){
                 return 0;
             }
         });
-   
-    dc.barChart('#total-cost-stacked-bar-chart')
+
+    dc.barChart('.total-cost-stacked-bar-chart')
             .width(1500)
             .height(800)
             .useViewBoxResizing(true)
@@ -77,22 +77,22 @@ function StackedBarChartTotalCost(ndx){
                     console.log(text_object)
                     return text_object
                 })
-                .attr('x', function(d){ 
-                    return +d.getAttribute('x') + (d.getAttribute('width')/2); 
+                .attr('x', function(d){
+                    return +d.getAttribute('x') + (d.getAttribute('width')/2);
                 })
                 .attr('y', function(d){ return +d.getAttribute('y') + 15; })
                 .attr('style', function(d){
                     if (+d.getAttribute('height') < 18) return "display:none";
                 });
-            
+
             });
 }
 
 function makePie(ndx) {
     var type_dim = ndx.dimension(dc.pluck("Type"));
     var total_cost_pie_chart = type_dim.group().reduceSum(dc.pluck('Sum'));
-    
-    dc.pieChart('#total-cost-pie-chart')
+
+    dc.pieChart('.total-cost-pie-chart')
         .height(350)
         .width(500)
         .radius(210)

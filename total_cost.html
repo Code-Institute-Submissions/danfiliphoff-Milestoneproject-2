@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
 </head>
 
-<body id="index-body-size,body-account">
-    <div class="container-fluid" id="index-background">
+<body class="index-body-size, body-account">
+    <div class="container-fluid, index-background">
         <header>
-            <!--*******Title*********--> 
+            <!--*******Title*********-->
             <div >
                 <div class="row">
                     <h1 class="col-md-12 paddingtitle">
@@ -26,9 +26,9 @@
             </div>
         </header>
         <div class = "body-account">
-            <!--****** Navigation Buttons******--> 
-            <div class="mobile" id="indexcontent">
-                <div class="row" id="center-btn">
+            <!--****** Navigation Buttons******-->
+            <div class="mobile, indexcontent">
+                <div class="row, center-btn">
                     <div class="col-md-12">
                         <form class="navigation-link-inline" action="total_cost.html" method="get">
                             <button class="mainbutton">
@@ -51,31 +51,31 @@
                     </button>
                 </div>
             </div>
-            <!--*****Graphs******--> 
+            <!--*****Graphs******-->
             <div class="container">
-                <!--*****Pie Chart******--> 
+                <!--*****Pie Chart******-->
                 <div class="row">
                     <section class="col-md-12">
                         <h2 class="h2-chart-heading">TOTAL SALARY COST</h2>
-                        <div id="total-cost-pie-chart"></div>
+                        <div class="total-cost-pie-chart"></div>
                     </section>  '
                 </div>
-                <!--*****Bar Chart******--> 
+                <!--*****Bar Chart******-->
                 <div class="row">
                     <section class="col-md-12">
                         <h2 class="h2-chart-heading">TOTAL SALARY COST OVER TIME</h2>
-                        <div id="total-cost-stacked-bar-chart"></div>
-                    </section>  
+                        <div class="total-cost-stacked-bar-chart"></div>
+                    </section>
                 </div>
-            </div> 
+            </div>
         </div>
-        <!--****** Footer******--> 
+        <!--****** Footer******-->
         <footer class="container-fluid footer-pinned">
             <div class="row footerbackgrund">
             </div>
         </footer>
     </div>
-    
+
 <script>
     d3.select("#total-cost-stacked-bar-chart > svg > g > g.axis.x > g > text").style('color', 'red');
 </script>
@@ -89,4 +89,4 @@
 <script src="static/js/total_cost.js"></script>
 </body>
 </html>
-  
+
