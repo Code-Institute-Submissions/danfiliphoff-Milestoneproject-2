@@ -16,7 +16,7 @@
     position: relative;
 }
 
-/*--------Index-------*/
+/*--------INDEX-------*/
 .index-body-size{
     position: fixed;
     height: 100%;
@@ -48,7 +48,7 @@
     margin-bottom: 15px!important;
 }
 
-/*--------Navigation buttons-------*/
+/*--------NAVIGATION BUTTONS-------*/
 .center-btn{
     margin-right: 20px;
 }
@@ -259,6 +259,9 @@
     margin-top: 10px;
 }
 
+body > div > div > div.container > div:nth-child(3) > section.col-md-7 > div > svg{
+    overflow:visible;
+}
 
 /*--------------FOOTER-------------------*/
 
