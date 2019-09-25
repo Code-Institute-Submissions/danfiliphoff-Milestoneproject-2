@@ -103,6 +103,10 @@ Creates cost per type bar chart.
 function cost_per_type(ndx){
     var cost_per_type_dimension = ndx.dimension(dc.pluck("Type"));
     var cost_per_type_group = cost_per_type_dimension.group().reduceSum(dc.pluck('Sum'));
+    var top_value_dimension= cost_per_type_group.top(1)+100000;
+    /*var bottom_value_dimension= cost_per_type_group.bottom(1);
+    console.log(bottom_value_dimension);*/
+    console.log(top_value_dimension);
     var filtered_cost_per_type_group = remove_empty_bins(cost_per_type_group);
 
     function remove_empty_bins(cost_per_type_group) {
@@ -129,7 +133,7 @@ function cost_per_type(ndx){
             .gap(15)
             .centerBar(true)
             .x(d3.scale.ordinal())
-            .y(d3.scale.linear().domain([-300000, 3270000]))
+            .y(d3.scale.linear().domain([-300000, 3300000]))
             .xUnits(dc.units.ordinal)
             .on('renderlet',function (chart) {
                     chart.selectAll("g.x text")
