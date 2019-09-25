@@ -86,6 +86,7 @@ function StackedBarChartTotalCost(ndx){
             .margins({top: 10, left: 80, right: 1, bottom: 50})
             .dimension(payment_date_dim_bar)
             .group(NettpayByMonth, "Nettpay")
+            .transitionDuration(500)
             .stack(TaxesByMonth, "Taxes")
             .stack(SocialSecurityFeesByMonth, "Sociala")
             .renderLabel(true)

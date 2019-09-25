@@ -227,9 +227,9 @@
 }
 
 /*--------------GRAPHS AND CHARTS SPECIFIC-------------------*/
-.Cost-Per-Type
+/*.Cost-Per-Type
  .axis.y { display: none;
- }
+ }*/
 
 .Cost-Per-Type > svg > g > g.axis.x > g > text{
     text-anchor: end !important;

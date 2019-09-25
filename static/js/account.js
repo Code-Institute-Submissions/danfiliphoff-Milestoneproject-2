@@ -109,7 +109,7 @@ function cost_per_type(ndx){
     return {
         all:function () {
             return cost_per_type_group.all().filter(function(d) {
-                return d.value !== 0; // if integers only
+                return d.value !== 0;
              });
             }
            };
@@ -125,10 +125,11 @@ function cost_per_type(ndx){
             .transitionDuration(500)
             .renderLabel(true)
             .elasticX(true)
-            .elasticY(true)
+            .elasticY(false)
             .gap(15)
             .centerBar(true)
             .x(d3.scale.ordinal())
+            .y(d3.scale.linear().domain([-300000, 3270000]))
             .xUnits(dc.units.ordinal)
             .on('renderlet',function (chart) {
                     chart.selectAll("g.x text")
