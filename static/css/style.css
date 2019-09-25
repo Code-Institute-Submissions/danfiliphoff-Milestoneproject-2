@@ -257,6 +257,10 @@ body > div > div > div.container > div:nth-child(3) > section.col-md-7 > div > s
     overflow:visible;
 }
 
+body > div > div > div.container > div:nth-child(2) > section > div > svg > g > g.axis.x {
+    margin-left:20px !important;
+}
+
 /*--------------FOOTER-------------------*/
 
 .footerbackgrund{

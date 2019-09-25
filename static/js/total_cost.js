@@ -97,6 +97,8 @@ function StackedBarChartTotalCost(ndx){
             .xUnits(d3.time.months)
             .y(d3.scale.linear().domain([0, 850000]))
             .on('renderlet', function (chart) {
+                chart.selectAll("g.x text")
+                    .attr('transform', "translate(-24,0)");
                 var gLabels = chart.select(".labels");
                 if (gLabels.empty()){
                     gLabels = chart.select(".chart-body").append('g').classed('labels', true);

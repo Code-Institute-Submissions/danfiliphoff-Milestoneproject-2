@@ -133,6 +133,7 @@ function cost_per_type(ndx){
             .on('renderlet',function (chart) {
                     chart.selectAll("g.x text")
                       .attr('dx', '-10')
-                      .attr('transform', "translate(10,0) rotate(-35)");
+                      .attr('dy', '-10')
+                      .attr('transform', "translate(10,10) rotate(-35)");
                 });
 }
