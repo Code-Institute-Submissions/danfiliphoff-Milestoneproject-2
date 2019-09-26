@@ -88,7 +88,7 @@ function cost_over_time(ndx) {
         .width(1000)
         .height(500)
         .useViewBoxResizing(true)
-        .margins({top: 10, right: 150, bottom: 30, left: 150})
+        .margins({top: 10, right: 150, bottom: 55, left: 150})
         .dimension(cost_over_time_dim)
         .elasticY(true)
         .group(cost_over_time_group)
@@ -103,11 +103,13 @@ Creates cost per type bar chart.
 function cost_per_type(ndx){
     var cost_per_type_dimension = ndx.dimension(dc.pluck("Type"));
     var cost_per_type_group = cost_per_type_dimension.group().reduceSum(dc.pluck('Sum'));
-    var top_value_dimension= cost_per_type_group.top(1)+100000;
-    /*var bottom_value_dimension= cost_per_type_group.bottom(1);
-    console.log(bottom_value_dimension);*/
-    console.log(top_value_dimension);
     var filtered_cost_per_type_group = remove_empty_bins(cost_per_type_group);
+
+/*
+    cost_per_type_group.max = function() {
+    return Math.max.apply(null, this);
+    };
+    console.log(cost_per_type_group.max )*/
 
     function remove_empty_bins(cost_per_type_group) {
     return {
