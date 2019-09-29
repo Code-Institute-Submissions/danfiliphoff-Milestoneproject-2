@@ -14,7 +14,7 @@ To allow the material to be used in a variaty of ways explanatory texts have bee
 a visualization of the data, the interpretation should be left for the user.
 
 As part of the preparations for constructing this site the following wireframe was made:
-![Image of Wireframe](https://b272b0d1-720a-401c-be12-af5e64fa98bf.ws-eu0.gitpod.io/files/download/?id=6444f96b-edc8-4999-84f6-c3f319f5010f)
+![Image of Wireframe](https://raw.githubusercontent.com/danfiliphoff/Milestoneproject-2/master/static/pictures/readme/wireframe_milestone2.PNG)
 
 ## Features
 ### Existing Features
