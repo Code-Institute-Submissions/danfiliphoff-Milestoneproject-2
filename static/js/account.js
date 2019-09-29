@@ -125,7 +125,7 @@ function cost_per_type(ndx){
             .transitionDuration(500)
             .renderLabel(false)
             .elasticX(true)
-            .elasticY(false)
+            .elasticY(true)
             .gap(15)
             .centerBar(true)
             .x(d3.scale.ordinal())
