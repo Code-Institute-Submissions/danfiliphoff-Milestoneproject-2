@@ -48,7 +48,7 @@ It turned out that the line had to be styled using CSS, fill:none property(see l
 -The labels on the x-axis of the cost per type bar graph does not render centered in relationship to the bar when the graph is used dynamicaly(see the below picture).
 Despite extensive reaserch thrue out the project I have not found the couse or solution for this fault. Altough this bug does affect the aesthetics of the
 graph it does not leave the graph unusable.
-![Image of uncentered x axis label](https://b272b0d1-720a-401c-be12-af5e64fa98bf.ws-eu0.gitpod.io/files/download/?id=6444f96b-edc8-4999-84f6-c3f319f5010f)
+![Image of uncentered x axis label](https://raw.githubusercontent.com/danfiliphoff/Milestoneproject-2/master/static/pictures/readme/uncentered_label.PNGhttps://raw.githubusercontent.com/danfiliphoff/Milestoneproject-2/master/static/pictures/readme/uncentered_label.PNG)
 
 
 ## Deployment
