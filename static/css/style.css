@@ -155,6 +155,8 @@
 }
 
 /*--------------SELECTORS AND DROPDOWNS -------------------*/
+.a.reset-all,
+.btn.btn-default.reset-all,
 .salary-type-selector > select,
 .index-background > div > div.container > div:nth-child(2) > div > button,
 .index-background > div > div.row > div > button
@@ -169,6 +171,15 @@
     text-align: center;
 }
 
+.body > div > div > div.container > div:nth-child(2) > div > button > a{
+    margin-left: -36px!important;
+}
+
+.btn.btn-default.reset-all{
+    background-color: #D3F8FF;
+    border-radius: 25%;
+    text-align: left;
+}
 .salary-type-selector > select,button, input, select, textarea,
 .index-background > div > div.container > div:nth-child(2) > div > button,
 .index-background > div > div.row > div > button{
@@ -182,25 +193,24 @@
     text-transform: uppercase;
 }
 
+.btn.btn-default.reset-all,
 .index-background > div > div.container > div:nth-child(2) > div > button{
     margin-top:10px!important;
 }
 
+.btn.btn-default.reset-all,
 .btn-default{
     padding-top:1px!important;
 }
 
-.salary-type-selector > select > option:nth-child(1){
-    text-transform: uppercase;
-}
-
 /*--------------GRAPHS AND CHARTS GENERAL  -------------------*/
 .line {
-         fill: none;
-         stroke: #004054;
-         stroke-width: 6px;
-         }
+    fill: none;
+    stroke: #004054;
+    stroke-width: 6px;
+}
 
+.btn.btn-default.reset-all,
 .Cost-Per-Type > svg,
 .Cost-Over-Time > svg,
 .cost-per-account > svg,
@@ -212,6 +222,7 @@
     margin:auto;
 }
 
+.reset-all,
 .Cost-Over-Time > svg > g > g.axis.y,
 .Cost-Over-Time > svg > g > g.axis.x,
 .cost-per-account > svg >.dc-legend,
