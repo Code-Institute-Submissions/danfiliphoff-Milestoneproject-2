@@ -41,11 +41,15 @@ checked against the CSV file to ensure that the data is displaying properly.
 
 Testing have insured that the site is responsive to all screen sizez in google dev tools.
 
-Two particualrly intresting bugs where found and fixed thrue out the project:
+Two particualrly intresting bugs where found thrue out the project:
 - The line in my line chart rendered as an awkward black area instead of as a line despite all the HTML and Java Script beeing coorect.
-It turned out that the line had to be styled using CSS, fill:none property.
+It turned out that the line had to be styled using CSS, fill:none property(see line 198 in style.css).
 
--The labels on the x-axis of graphs did not align when using the chart interactivly...the solution to this is....
+-The labels on the x-axis of the cost per type bar graph does not render centered in relationship to the bar when the graph is used dynamicaly(see the below picture).
+Despite extensive reaserch thrue out the project I have not found the couse or solution for this fault. Altough this bug does affect the aesthetics of the
+graph it does not leave the graph unusable.
+![Image of uncentered x axis label](https://b272b0d1-720a-401c-be12-af5e64fa98bf.ws-eu0.gitpod.io/files/download/?id=6444f96b-edc8-4999-84f6-c3f319f5010f)
+
 
 ## Deployment
 ## Credits
