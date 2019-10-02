@@ -136,27 +136,5 @@ function cost_per_type(ndx){
                       .attr('dx', '-10')
                       .attr('dy', '-10')
                       .attr('transform', "translate(10,10) rotate(-35)");
-
-                                      var gLabels = chart.select(".labels");
-                if (gLabels.empty()){
-                    gLabels = chart.select(".chart-body").append('g').classed('labels', true);
-                }
-                var gLabelsData = gLabels.selectAll("text").data(chart.selectAll(".bar")[0]);
-                gLabelsData.exit().remove();
-                gLabelsData.enter().append("text");
-                gLabelsData
-                .attr('text-anchor', 'middle')
-                .attr('fill', 'black')
-                .text(function(d){
-                    text_object =  d3.select(d).datum().y
-                    return text_object
-                })
-                .attr('x', function(d){
-                    return +d.getAttribute('x') + (d.getAttribute('width')/2);
-                })
-                .attr('y', function(d){ return +d.getAttribute('y') + 15; })
-                .attr('style', function(d){
-                    if (+d.getAttribute('height') < 18) return "display:none";
-                });
                 });
 }
