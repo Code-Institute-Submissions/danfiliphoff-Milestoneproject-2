@@ -127,7 +127,6 @@ function cost_per_type(ndx){
             .elasticX(true)
             .elasticY(true)
             .gap(15)
-            .centerBar(true)
             .x(d3.scale.ordinal())
             .y(d3.scale.linear().domain([-300000, 3300000]))
             .xUnits(dc.units.ordinal)
