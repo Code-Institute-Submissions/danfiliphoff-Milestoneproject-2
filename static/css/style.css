@@ -238,10 +238,6 @@
 }
 
 /*--------------GRAPHS AND CHARTS SPECIFIC-------------------*/
-/*.Cost-Per-Type
- .axis.y { display: none;
- }*/
-
 .Cost-Per-Type > svg > g > g.axis.x > g > text{
     text-anchor: end !important;
 }
@@ -335,7 +331,6 @@
     }
 }
 
-
 @media (min-width: 768px){
 
     .welcome-text{
@@ -349,5 +344,11 @@
 
    .navbar-fixed-bottom {
     margin-bottom: -25px;
+    }
+}
+
+@media (min-width: 992px){
+    .total-salary-cost-pie-margin{
+    margin-left:25%;
     }
 }

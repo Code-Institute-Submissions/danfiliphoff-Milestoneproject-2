@@ -51,7 +51,7 @@ function cost_per_account(ndx) {
     var cost_per_account_dim = ndx.dimension(dc.pluck("Account"));
     var cost_per_account_group = cost_per_account_dim.group().reduceSum(dc.pluck('Sum'));
 
-    dc.pieChart('.cost-per-account')
+    dc.pieChart(".cost-per-account")
         .height(500)
         .width(500)
         .useViewBoxResizing(true)
@@ -61,15 +61,16 @@ function cost_per_account(ndx) {
         .dimension(cost_per_account_dim)
         .group(cost_per_account_group)
         .slicesCap(6)
-        .legend(dc.legend()
-            .x(140)
-            .y(180)
-            .itemHeight(13)
-            .gap(9)
-            .legendText(
-                function(d) {
-                    return d.name + " - " + d.data + " " + "KR ("
-            +  Math.round((d.data/(10241617/100))*100)/100 + "%)"})
+        .legend(
+            dc.legend()
+                .x(140)
+                .y(180)
+                .itemHeight(13)
+                .gap(9)
+                .legendText(
+                    function(d) {
+                        return d.name + " - " + d.data + " " + "KR ("
+                +  Math.round((d.data/(10241617/100))*100)/100 + "%)"})
             )
         .renderLabel(false);
 }
