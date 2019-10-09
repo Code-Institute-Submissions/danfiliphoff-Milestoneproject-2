@@ -97,6 +97,10 @@ function StackedBarChartTotalCost(ndx){
             .x(d3.time.scale().domain([minDate,maxDate]))
             .xUnits(d3.time.months)
             .y(d3.scale.linear().domain([0, 850000]))
+
+            /* försöker att formatera numren på y axeln så att de är "xxxx KR"
+            .yAxis().tickFormat(function (d) {d.data + " " + "KR"})*/
+
             .on('renderlet', function (chart) {
                 chart.selectAll("g.x text")
                     .attr('transform', "translate(-24,0)");
