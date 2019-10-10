@@ -30,7 +30,21 @@ function makeAccountDataGraphs(error, account){
    cost_per_type(ndx);
    cost_over_time(ndx);
    dc.renderAll();
+   addKrCostOverTime();
+   addKrCostPerType();
 }
+
+/**
+Adds "KR" to the end of each label on y-axis.
+*/
+function addKrCostOverTime() {
+    $(".Cost-Over-Time svg g g .axis,.y .tick text").each(function() {
+        let newtext = $( this ).text() + " KR";
+        $( this ).text(newtext);
+    })
+}
+
+
 
 /**
 Creates salary type selector menue.

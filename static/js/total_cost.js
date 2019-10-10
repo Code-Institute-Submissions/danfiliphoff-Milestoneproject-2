@@ -105,22 +105,6 @@ function StackedBarChartTotalCost(ndx){
             .x(d3.time.scale().domain([minDate,maxDate]))
             .xUnits(d3.time.months)
             .y(d3.scale.linear().domain([0, 850000]))
-
-            /* försöker att formatera numren på y axeln så att de är "xxxx KR"
-            borde vara någon del av .yAxis().tickFormat sim är fel
-
-            .yAxis().tickFormat(function (d) {d.data + " " + "KR"}).
-
-            Fråga:
-            I have a dc graph and I wish to manipulate the y-axis labels. Currently the y axis labels returns
-            only a value, say 8000. I want to maniuplate this value so that it returns "8000 KR", that is I want to add
-            what this value is. I tryed adding the code
-            .yAxis().tickFormat(function (d) {d.data + " " + "KR"})
-            to do this but it does not work. I belive that .tickFormat is the wrong function to use here. I have
-            looked true the documentation for somthing else but have not found anything. Any idea what I should use
-            to target the y-labels?
-
-            */
             .on('renderlet', function (chart) {
                 chart.selectAll("g.x text")
                     .attr('transform', "translate(-24,0)");
