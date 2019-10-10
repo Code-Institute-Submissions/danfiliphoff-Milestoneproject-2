@@ -20,6 +20,14 @@ function makeTotalCostGraps(error, totalCost){
    makePie(ndx);
    StackedBarChartTotalCost(ndx);
    dc.renderAll();
+   addKr();
+}
+
+function addKr() {
+    $(".total-cost-stacked-bar-chart svg g g .axis,.y .tick text").each(function() {
+        let newtext = $( this ).text() + " KR";
+        $( this ).text(newtext);
+    })
 }
 
 /**
