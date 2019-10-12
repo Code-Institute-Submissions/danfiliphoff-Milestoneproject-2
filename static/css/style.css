@@ -285,9 +285,16 @@
 }
 
 .footer-contact{
-    margin-left: 52px;
+    text-align: center;
+    font-family: "Nunito", Arial;
+    font-size: 12px;
+    text-transform: uppercase;
+    color:	#C1F5FF;
 }
 
+.footer-contact-margin{
+    margin-top: 15px;
+}
 
 /*-------------MEDIA QUERYS-----------*/
 @media  (min-width: 0px) and (max-width: 426px){
