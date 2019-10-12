@@ -284,6 +284,10 @@
   height: 60px;
 }
 
+.footer-contact{
+    margin-left: 52px;
+}
+
 
 /*-------------MEDIA QUERYS-----------*/
 @media  (min-width: 0px) and (max-width: 426px){
