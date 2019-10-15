@@ -7,8 +7,8 @@
   display: inline-block;
 }
 
-body > div > div > div.container > div.row.selector-align > div:nth-child(2) > button{
-    margin-left: 50px;
+.selector-margin{
+    margin-right: 66px;
 }
 
 /*--------HEADER-------*/
