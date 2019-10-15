@@ -7,6 +7,10 @@
   display: inline-block;
 }
 
+body > div > div > div.container > div.row.selector-align > div:nth-child(2) > button{
+    margin-left: 50px;
+}
+
 /*--------HEADER-------*/
 .paddingtitle{
     padding-top:25px;
