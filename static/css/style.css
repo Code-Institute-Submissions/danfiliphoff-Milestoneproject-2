@@ -1,16 +1,3 @@
-.selector-align {
-  width: 100%;
-  text-align: center;
-}
-.selector-center {
-  width: 85px;
-  display: inline-block;
-}
-
-.selector-margin{
-    margin-right: 87px !important;
-}
-
 /*--------HEADER-------*/
 .paddingtitle{
     padding-top:25px;
@@ -225,6 +212,20 @@ i.fa.fa-times{
     color:#004054;
     font-size: 14px;
 }
+
+.selector-align {
+  width: 100%;
+  text-align: center;
+}
+.selector-center {
+  width: 85px;
+  display: inline-block;
+}
+
+.selector-margin{
+    margin-right: 87px !important;
+}
+
 /*--------------GRAPHS AND CHARTS GENERAL  -------------------*/
 .line {
     fill: none;
