@@ -1,3 +1,12 @@
+.selector-align {
+  width: 100%;
+  text-align: center;
+}
+.selector-center {
+  width: 100px;
+  display: inline-block;
+}
+
 /*--------HEADER-------*/
 .paddingtitle{
     padding-top:25px;
