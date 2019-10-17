@@ -65,8 +65,34 @@ Function for cost per sold room chart
  */
  function CostPerSoldRoomLineGraph(ndx){
     var cost_per_sold_room_dimension = ndx.dimension(dc.pluck("PaymentDate"));
-    var cost_per_sold_room_group = cost_per_sold_room_dimension.group().reduceSum(dc.pluck('Quantity'));
+    var avarage_cost_per_sold_room_group = cost_per_sold_room_dimension().reduce(
+        function (p, v){
+            p.count++;
+            p.total += v.Sum;
+            p.avarage = p.total / p.count;
+            return p;
+        },
 
+        function(p, v) {
+            p.count--;
+            if (p.count == 0) {
+                p.total = 0;
+                p.average = 0;
+            } else {
+                p.total -= v.Sum;
+                p.average = p.total / p.count;
+            }
+            return p;
+        },
+
+        function () {
+            return { count: 0, total: 0, avarage: 0};
+        }
+
+
+    );
+
+/**
     var minDate = cost_per_sold_room_dimension.bottom(1)[0].PaymentDate;
     var maxDate = cost_per_sold_room_dimension.top(1)[0].PaymentDate;
 
@@ -77,10 +103,11 @@ Function for cost per sold room chart
         .margins({top: 10, right: 150, bottom: 55, left: 150})
         .dimension(cost_per_sold_room_dimension)
         .elasticY(true)
-        .group(cost_per_sold_room_group)
+        .group(total_cost_group)
         .transitionDuration(500)
         .x(d3.time.scale().domain([minDate,maxDate]))
         .yAxis().ticks(15);
+*/
  }
 
 
