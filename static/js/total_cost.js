@@ -23,6 +23,9 @@ function makeTotalCostGraps(error, totalCost){
    addKr();
 }
 
+/**
+Adds "KR" to the end of graph value labels on Y-axis
+*/
 function addKr() {
     $(".total-cost-stacked-bar-chart svg g g .axis,.y .tick text").each(function() {
         let newtext = $( this ).text() + " KR";
