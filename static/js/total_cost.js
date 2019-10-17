@@ -65,8 +65,7 @@ Function for cost per sold room chart
  */
  function CostPerSoldRoomLineGraph(ndx){
     var cost_per_sold_room_dimension = ndx.dimension(dc.pluck("PaymentDate"));
-    /*costomize the group to this need*/
-    var cost_per_sold_room_group = cost_per_sold_room_dimension.group().reduceSum(dc.pluck('Sum'));
+    var cost_per_sold_room_group = cost_per_sold_room_dimension.group().reduceSum(dc.pluck('Quantity'));
 
     var minDate = cost_per_sold_room_dimension.bottom(1)[0].PaymentDate;
     var maxDate = cost_per_sold_room_dimension.top(1)[0].PaymentDate;
