@@ -18,6 +18,7 @@ function makeTotalCostGraps(error, totalCost){
 
    var ndx=crossfilter(totalCost);
    makePie(ndx);
+   CostPerSoldRoomLineGraph(ndx);
    StackedBarChartTotalCost(ndx);
    dc.renderAll();
    addKr();
@@ -58,6 +59,31 @@ function makePie(ndx) {
         .renderLabel(false)
         .ordinalColors(['#1f78b4', '#F88212', '#2EA122']);
 }
+
+/**
+Function for cost per sold room chart
+ */
+ function CostPerSoldRoomLineGraph(ndx){
+    var cost_per_sold_room_dimension = ndx.dimension(dc.pluck("PaymentDate"));
+    /*costomize the group to this need*/
+    var cost_per_sold_room_group = cost_per_sold_room_dimension.group().reduceSum(dc.pluck('Sum'));
+
+    var minDate = cost_per_sold_room_dimension.bottom(1)[0].PaymentDate;
+    var maxDate = cost_per_sold_room_dimension.top(1)[0].PaymentDate;
+
+    dc.lineChart('.cost-per-sold-room')
+        .width(1000)
+        .height(500)
+        .useViewBoxResizing(true)
+        .margins({top: 10, right: 150, bottom: 55, left: 150})
+        .dimension(cost_per_sold_room_dimension)
+        .elasticY(true)
+        .group(cost_per_sold_room_group)
+        .transitionDuration(500)
+        .x(d3.time.scale().domain([minDate,maxDate]))
+        .yAxis().ticks(15);
+ }
+
 
 /**
 Function for stacked bar chart.
