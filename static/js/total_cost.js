@@ -18,7 +18,7 @@ function makeTotalCostGraps(error, totalCost){
 
    var ndx=crossfilter(totalCost);
    makePie(ndx);
-   CostPerSoldRoomLineGraph(ndx);
+   CostAndSoldRoomLineGraph(ndx);
    StackedBarChartTotalCost(ndx);
    dc.renderAll();
    addKr();
@@ -61,55 +61,34 @@ function makePie(ndx) {
 }
 
 /**
-Function for cost per sold room chart
+Function for cost and sold room chart
  */
- function CostPerSoldRoomLineGraph(ndx){
-    var cost_per_sold_room_dimension = ndx.dimension(dc.pluck("PaymentDate"));
-    var avarage_cost_per_sold_room_group = cost_per_sold_room_dimension().reduce(
-        function (p, v){
-            p.count++;
-            p.total += v.Sum;
-            p.avarage = p.total / p.count;
-            return p;
-        },
+ function CostAndSoldRoomLineGraph(ndx){
+    var cost_over_time_dim = ndx.dimension(dc.pluck("PaymentDate"));
+    var cost_over_time_group = cost_over_time_dim.group().reduceSum(dc.pluck('Sum'));
+    var sold_rooms_over_over_time_group = cost_over_time_dim.group().reduceSum(dc.pluck('Quantity'));
 
-        function(p, v) {
-            p.count--;
-            if (p.count == 0) {
-                p.total = 0;
-                p.average = 0;
-            } else {
-                p.total -= v.Sum;
-                p.average = p.total / p.count;
-            }
-            return p;
-        },
+    var minDate = cost_over_time_dim.bottom(1)[0].PaymentDate;
+    var maxDate = cost_over_time_dim.top(1)[0].PaymentDate;
 
-        function () {
-            return { count: 0, total: 0, avarage: 0};
-        }
-
-
-    );
-
-/**
-    var minDate = cost_per_sold_room_dimension.bottom(1)[0].PaymentDate;
-    var maxDate = cost_per_sold_room_dimension.top(1)[0].PaymentDate;
-
-    dc.lineChart('.cost-per-sold-room')
-        .width(1000)
-        .height(500)
-        .useViewBoxResizing(true)
-        .margins({top: 10, right: 150, bottom: 55, left: 150})
-        .dimension(cost_per_sold_room_dimension)
-        .elasticY(true)
-        .group(total_cost_group)
-        .transitionDuration(500)
-        .x(d3.time.scale().domain([minDate,maxDate]))
-        .yAxis().ticks(15);
-*/
+    dc.compositeChart('.cost-and-sold-rooms')
+            .width(990)
+            .height(200)
+            .dimension(cost_over_time_dim)
+            .x(d3.time.scale().domain([minDate, maxDate]))
+            .renderHorizontalGridLines(true)
+            .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
+            .compose([
+                dc.lineChart(compositeChart)
+                    .colors('green')
+                    .group(cost_over_time_group, 'Cost'),
+                dc.lineChart(compositeChart)
+                    .colors('red')
+                    .group(sold_rooms_over_over_time_group, 'Rooms'),
+            ])
+            .brushOn(false)
+            .render();
  }
-
 
 /**
 Function for stacked bar chart.
