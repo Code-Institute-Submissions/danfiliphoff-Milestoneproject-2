@@ -67,6 +67,7 @@ Function for cost and sold room chart
     var cost_over_time_dim = ndx.dimension(dc.pluck("PaymentDate"));
     var cost_over_time_group = cost_over_time_dim.group().reduceSum(dc.pluck('Sum'));
     var sold_rooms_over_over_time_group = cost_over_time_dim.group().reduceSum(dc.pluck('Quantity'));
+    var compositeChart = dc.compositeChart('.cost-and-sold-rooms');
 
     var minDate = cost_over_time_dim.bottom(1)[0].PaymentDate;
     var maxDate = cost_over_time_dim.top(1)[0].PaymentDate;
