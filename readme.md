@@ -53,13 +53,8 @@ This was fixed by removing the .centerBar dc.js property from the graaph.
 
 
 ## Deployment
-
-
-
-
-
-
-
+To deploy the project I used GitHub Pages. I have used the master branch when deploying the project.
+There is no diffrences between the deplyed version and the development version.
 
 
 ## Credits
