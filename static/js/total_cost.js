@@ -18,21 +18,13 @@ function makeTotalCostGraps(error, totalCost){
 
    var ndx=crossfilter(totalCost);
    makePie(ndx);
-   CostAndSoldRoomLineGraph(ndx);
+   SoldRoomsLineGraph(ndx);
    StackedBarChartTotalCost(ndx);
    dc.renderAll();
    addKr();
 }
 
-/**
-Adds "KR" to the end of graph value labels on Y-axis
-*/
-function addKr() {
-    $(".total-cost-stacked-bar-chart svg g g .axis,.y .tick text").each(function() {
-        let newtext = $( this ).text() + " KR";
-        $( this ).text(newtext);
-    })
-}
+
 
 /**
 Function for Pie chart.
@@ -61,35 +53,38 @@ function makePie(ndx) {
 }
 
 /**
-Function for cost and sold room chart
+Function for sold room chart
  */
- function CostAndSoldRoomLineGraph(ndx){
+ function SoldRoomsLineGraph(ndx){
     var cost_over_time_dim = ndx.dimension(dc.pluck("PaymentDate"));
-    var cost_over_time_group = cost_over_time_dim.group().reduceSum(dc.pluck('Sum'));
     var sold_rooms_over_over_time_group = cost_over_time_dim.group().reduceSum(dc.pluck('Quantity'));
-    var compositeChart = dc.compositeChart('.cost-and-sold-rooms');
 
     var minDate = cost_over_time_dim.bottom(1)[0].PaymentDate;
     var maxDate = cost_over_time_dim.top(1)[0].PaymentDate;
 
-    dc.compositeChart('.cost-and-sold-rooms')
-            .width(990)
-            .height(200)
-            .dimension(cost_over_time_dim)
-            .x(d3.time.scale().domain([minDate, maxDate]))
-            .renderHorizontalGridLines(true)
-            .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
-            .compose([
-                dc.lineChart(compositeChart)
-                    .colors('green')
-                    .group(cost_over_time_group, 'Cost'),
-                dc.lineChart(compositeChart)
-                    .colors('red')
-                    .group(sold_rooms_over_over_time_group, 'Rooms'),
-            ])
-            .brushOn(false)
-            .render();
+    dc.lineChart('.sold-rooms')
+        .width(1000)
+        .height(500)
+        .useViewBoxResizing(true)
+        .margins({top: 10, right: 150, bottom: 55, left: 150})
+        .dimension(cost_over_time_dim)
+        .elasticY(true)
+        .group(sold_rooms_over_over_time_group)
+        .transitionDuration(500)
+        .x(d3.time.scale().domain([minDate,maxDate]))
+        .yAxis().ticks(15);
  }
+
+ /**
+Adds "KR" to the end of graph value labels on Y-axis
+*/
+
+function addKr() {
+    $(".total-cost-stacked-bar-chart svg g g .axis,.y .tick text").each(function() {
+        let newtext = $( this ).text() + " KR";
+        $( this ).text(newtext);
+    })
+}
 
 /**
 Function for stacked bar chart.
