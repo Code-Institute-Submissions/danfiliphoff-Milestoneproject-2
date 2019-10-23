@@ -18,13 +18,10 @@ function makeTotalCostGraps(error, totalCost){
 
    var ndx=crossfilter(totalCost);
    makePie(ndx);
-   SoldRoomsLineGraph(ndx);
    StackedBarChartTotalCost(ndx);
    dc.renderAll();
    addKr();
 }
-
-
 
 /**
 Function for Pie chart.
@@ -52,33 +49,9 @@ function makePie(ndx) {
         .ordinalColors(['#1f78b4', '#F88212', '#2EA122']);
 }
 
-/**
-Function for sold room chart
- */
- function SoldRoomsLineGraph(ndx){
-    var cost_over_time_dim = ndx.dimension(dc.pluck("PaymentDate"));
-    var sold_rooms_over_over_time_group = cost_over_time_dim.group().reduceSum(dc.pluck('Quantity'));
-
-    var minDate = cost_over_time_dim.bottom(1)[0].PaymentDate;
-    var maxDate = cost_over_time_dim.top(1)[0].PaymentDate;
-
-    dc.lineChart('.sold-rooms')
-        .width(1000)
-        .height(500)
-        .useViewBoxResizing(true)
-        .margins({top: 10, right: 150, bottom: 55, left: 150})
-        .dimension(cost_over_time_dim)
-        .elasticY(true)
-        .group(sold_rooms_over_over_time_group)
-        .transitionDuration(500)
-        .x(d3.time.scale().domain([minDate,maxDate]))
-        .yAxis().ticks(15);
- }
-
  /**
 Adds "KR" to the end of graph value labels on Y-axis
 */
-
 function addKr() {
     $(".total-cost-stacked-bar-chart svg g g .axis,.y .tick text").each(function() {
         let newtext = $( this ).text() + " KR";
