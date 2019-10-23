@@ -31,7 +31,6 @@ function makeAccountDataGraphs(error, account){
    cost_over_time(ndx);
    dc.renderAll();
    addKrCostOverTime();
-   addKrCostPerType();
 }
 
 /**
@@ -41,10 +40,8 @@ function addKrCostOverTime() {
     $(".Cost-Over-Time svg g g .axis,.y .tick text").each(function() {
         let newtext = $( this ).text() + " KR";
         $( this ).text(newtext);
-    })
+    });
 }
-
-
 
 /**
 Creates salary type selector menue.
@@ -81,11 +78,8 @@ function cost_per_account(ndx) {
                 .y(180)
                 .itemHeight(13)
                 .gap(9)
-                .legendText(
-                    function(d) {
-                        return d.name + " - " + d.data + " " + "KR ("
-                +  Math.round((d.data/(10241617/100))*100)/100 + "%)"})
-            )
+                .legendText(function(d) {return d.name + " - " + d.data + " " + "KR ("+  Math.round((d.data/(10241617/100))*100)/100 + "%)"})
+                )
         .renderLabel(false);
 }
 
